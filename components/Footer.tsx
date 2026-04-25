@@ -86,7 +86,7 @@ export default function Footer() {
             {/* Social */}
             <div className="flex gap-3">
               {[
-                { Icon: Instagram, href: "#", label: "Instagram" },
+                { Icon: Instagram, href: "https://www.instagram.com/_ahlan.homestays_?igsh=NGdveTIyYml4b2ty", label: "Instagram" },
                 { Icon: Facebook, href: "#", label: "Facebook" },
                 { Icon: Youtube, href: "#", label: "YouTube" },
               ].map(({ Icon, href, label }) => (
