@@ -6,4 +6,4 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "AhlanDB"
-database_id = "REPLACE_WITH_YOUR_D1_ID"
+database_id = "2ef220e5-7853-4494-946d-8f59070ad6cf"
