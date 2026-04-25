@@ -1,0 +1,16 @@
+name = "ahlan-homestays"
+compatibility_date = "2024-04-03"
+compatibility_flags = ["nodejs_compat"]
+
+[site]
+bucket = ".next"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "AhlanDB"
+database_id = "REPLACE_WITH_YOUR_D1_ID"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "ahlan-assets"
+# Preview: wrangler r2 bucket create ahlan-assets

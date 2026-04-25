@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
-import { writeFile } from 'fs/promises';
-import path from 'path';
+import { getRequestContext } from '@cloudflare/next-on-pages';
+
+export const runtime = 'edge';
 
 export async function POST(req: Request) {
   try {
@@ -18,18 +19,30 @@ export async function POST(req: Request) {
     }
 
     const bytes = await file.arrayBuffer();
+    const filename = `${Date.now()}-${file.name.replace(/\s+/g, '-')}`;
+
+    const ctx = getRequestContext();
+    const bucket = ctx?.env?.BUCKET;
+
+    if (bucket) {
+      // Save to R2
+      await bucket.put(filename, bytes, {
+        httpMetadata: { contentType: file.type },
+      });
+      
+      // Use a proxy URL or public bucket URL
+      const publicUrl = `/api/images/${filename}`;
+      return NextResponse.json({ success: true, url: publicUrl });
+    }
+
+    // Local Fallback
+    const fs = require('fs');
+    const path = require('path');
     const buffer = Buffer.from(bytes);
-
-    // Create unique filename
-    const filename = `${Date.now()}-${file.name.replace(/\\s+/g, '-')}`;
     const uploadPath = path.join(process.cwd(), 'public/uploads', filename);
-
-    await writeFile(uploadPath, buffer);
-
-    // Return the public URL
-    const publicUrl = `/uploads/${filename}`;
-
-    return NextResponse.json({ success: true, url: publicUrl });
+    await fs.promises.writeFile(uploadPath, buffer);
+    
+    return NextResponse.json({ success: true, url: `/uploads/${filename}` });
   } catch (error) {
     console.error("Upload error:", error);
     return NextResponse.json({ error: 'Failed to upload file' }, { status: 500 });

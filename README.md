@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Cloudflare D1 & R2 Deployment
 
-## Getting Started
+This project is optimized for Cloudflare Pages with D1 Database and R2 Storage.
 
-First, run the development server:
+### 1. Prerequisites
+- [Cloudflare Account](https://dash.cloudflare.com/)
+- [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-setup/)
 
+### 2. Setup D1 Database
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Create the database
+npx wrangler d1 create AhlanDB
+
+# Initialize the schema
+npx wrangler d1 execute AhlanDB --remote --file=migrations/schema.sql
+
+# Seed the data from database.json
+npx wrangler d1 execute AhlanDB --remote --file=migrations/seed.sql
+```
+*Note: Copy the `database_id` from the output and paste it into `wrangler.toml`.*
+
+### 3. Setup R2 Bucket
+```bash
+# Create the bucket for images
+npx wrangler r2 bucket create ahlan-assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. Local Development
+To run locally with D1/R2 bindings:
+```bash
+npm run pages:preview
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 5. Deployment
+```bash
+npm run pages:deploy
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Architecture
+- **Runtime**: Cloudflare Workers (via Next.js Edge Runtime)
+- **Database**: Cloudflare D1 (SQLite)
+- **Storage**: Cloudflare R2
+- **Persistence**: No more `database.json` in production! All changes via the Admin Panel persist in D1.

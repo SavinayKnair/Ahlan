@@ -1,18 +1,7 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { getRequestContext } from '@cloudflare/next-on-pages';
 
-const dbPath = path.join(process.cwd(), 'database.json');
-
-function getDbData() {
-  if (!fs.existsSync(dbPath)) return { rooms: [], packages: [], bookings: [] };
-  const raw = fs.readFileSync(dbPath, 'utf8');
-  return JSON.parse(raw);
-}
-
-function saveDbData(data: any) {
-  fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
-}
+export const runtime = 'edge';
 
 export async function POST(req: Request) {
   try {
@@ -23,18 +12,62 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Name and Phone are required' }, { status: 400 });
     }
 
-    // Append metadata
+    const ctx = getRequestContext();
+    const db = ctx?.env?.DB;
+
+    const newBookingId = `AHL-${Date.now().toString().slice(-6)}`;
+    const timestamp = new Date().toISOString();
+
+    if (db) {
+      // Save to D1
+      await db.prepare(`
+        INSERT INTO bookings (id, timestamp, status, type, name, phone, email, country, checkIn, checkOut, guests, roomType, addons, notes)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      `).bind(
+        newBookingId,
+        timestamp,
+        "Pending",
+        booking.type || "General Inquiry",
+        booking.name,
+        booking.phone,
+        booking.email || "N/A",
+        booking.country || "India",
+        booking.checkIn || "N/A",
+        booking.checkOut || "N/A",
+        booking.guests || "N/A",
+        booking.roomType || "Stay",
+        booking.addons || "",
+        booking.notes || ""
+      ).run();
+
+      return NextResponse.json({ success: true, booking: { id: newBookingId, ...booking } });
+    }
+
+    // Fallback for local development
+    const fs = require('fs');
+    const path = require('path');
+    const dbPath = path.join(process.cwd(), 'database.json');
+
+    const getDbData = () => {
+      if (!fs.existsSync(dbPath)) return { rooms: [], packages: [], bookings: [] };
+      const raw = fs.readFileSync(dbPath, 'utf8');
+      return JSON.parse(raw);
+    };
+
+    const saveDbData = (data: any) => {
+      fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
+    };
+
     const newBooking = {
-      id: `AHL-${Date.now().toString().slice(-6)}`,
-      timestamp: new Date().toISOString(),
+      id: newBookingId,
+      timestamp,
       status: "Pending",
       ...booking
     };
 
-    const db = getDbData();
-    db.bookings = [newBooking, ...(db.bookings || [])];
-    
-    saveDbData(db);
+    const localDb = getDbData();
+    localDb.bookings = [newBooking, ...(localDb.bookings || [])];
+    saveDbData(localDb);
 
     return NextResponse.json({ success: true, booking: newBooking });
   } catch (error) {
