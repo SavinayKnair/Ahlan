@@ -7,56 +7,11 @@ import Image from "next/image";
 import toast from "react-hot-toast";
 
 function ImageUploader({ value, onChange }: { value: string, onChange: (val: string) => void }) {
-  const [mode, setMode] = useState<"upload" | "url">("upload");
-  const [uploading, setUploading] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    setUploading(true);
-    const formData = new FormData();
-    formData.append("file", file);
-
-    try {
-      const res = await fetch("/api/admin/upload", {
-        method: "POST",
-        body: formData,
-      });
-      const data = await res.json();
-      
-      if (res.ok && data.url) {
-        onChange(data.url);
-        toast.success("Image uploaded successfully!");
-      } else {
-        toast.error(data.error || "Upload failed");
-      }
-    } catch (error) {
-      toast.error("Network error during upload");
-    } finally {
-      setUploading(false);
-    }
-  };
-
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between mb-2">
-        <label className="block text-xs font-sans text-warmgray uppercase tracking-wider font-semibold">Media Image</label>
-        <div className="flex bg-gray-100 dark:bg-white/5 rounded-lg p-1">
-          <button
-            onClick={() => setMode("upload")}
-            className={`px-3 py-1 text-[10px] font-bold rounded-md flex items-center gap-1.5 transition-colors ${mode === "upload" ? "bg-white dark:bg-[#131323] text-midnight dark:text-white shadow-sm" : "text-warmgray"}`}
-          >
-            <Upload className="w-3 h-3" /> Device
-          </button>
-          <button
-            onClick={() => setMode("url")}
-            className={`px-3 py-1 text-[10px] font-bold rounded-md flex items-center gap-1.5 transition-colors ${mode === "url" ? "bg-white dark:bg-[#131323] text-midnight dark:text-white shadow-sm" : "text-warmgray"}`}
-          >
-            <LinkIcon className="w-3 h-3" /> URL
-          </button>
-        </div>
+        <label className="block text-xs font-sans text-warmgray uppercase tracking-wider font-semibold">Image Path / URL</label>
+        <span className="text-[10px] text-warmgray font-sans italic">Example: /images/rooms/room-1.jpg</span>
       </div>
 
       {value && (
@@ -68,26 +23,17 @@ function ImageUploader({ value, onChange }: { value: string, onChange: (val: str
         </div>
       )}
 
-      {mode === "upload" ? (
-        <div>
-          <input type="file" accept="image/*" className="hidden" ref={fileInputRef} onChange={handleFileChange} />
-          <button
-            onClick={() => fileInputRef.current?.click()}
-            disabled={uploading}
-            className="w-full py-3 border-2 border-dashed border-gray-300 dark:border-white/20 rounded-xl text-sm font-sans text-warmgray hover:border-champagne hover:text-champagne transition-colors flex flex-col items-center justify-center gap-2 bg-gray-50 dark:bg-white/5"
-          >
-            {uploading ? <Loader2 className="w-5 h-5 animate-spin" /> : <><Upload className="w-5 h-5" /> Select file from device</>}
-          </button>
-        </div>
-      ) : (
+      <div className="relative">
+        <LinkIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-warmgray" />
         <input 
           type="text" 
           value={value} 
           onChange={(e) => onChange(e.target.value)} 
-          placeholder="https://..."
-          className="w-full bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm text-midnight dark:text-white focus:outline-none focus:border-champagne transition-colors" 
+          placeholder="/images/rooms/..."
+          className="w-full bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl pl-11 pr-4 py-3 text-sm text-midnight dark:text-white focus:outline-none focus:border-champagne transition-colors" 
         />
-      )}
+      </div>
+      <p className="text-[10px] text-warmgray px-1">Tip: Upload images to your GitHub repository in the <code>public/images/</code> folder to use them here.</p>
     </div>
   );
 }
@@ -139,8 +85,8 @@ function DashboardContent() {
   const [selectedBooking, setSelectedBooking] = useState<any>(null);
   const [showAddRoom, setShowAddRoom] = useState(false);
   const [showAddPkg, setShowAddPkg] = useState(false);
-  const [newRoom, setNewRoom] = useState({ name: "", basePrice: "", guests: "", desc: "", image: "", availability: "Available" });
-  const [newPkg, setNewPkg] = useState({ title: "", basePrice: "", duration: "", desc: "", image: "" });
+  const [newRoom, setNewRoom] = useState({ name: "", basePrice: "", guests: "", desc: "", image: "/images/rooms/default.jpg", availability: "Available" });
+  const [newPkg, setNewPkg] = useState({ title: "", basePrice: "", duration: "", desc: "", image: "/images/packages/default.jpg" });
   const historyRef = useRef<any[]>([]);
   const futureRef = useRef<any[]>([]);
 

@@ -7,7 +7,3 @@ compatibility_flags = ["nodejs_compat"]
 binding = "DB"
 database_name = "AhlanDB"
 database_id = "REPLACE_WITH_YOUR_D1_ID"
-
-[[r2_buckets]]
-binding = "BUCKET"
-bucket_name = "ahlan-assets"
