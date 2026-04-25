@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://ahlanhomestays.com";
+  const base = "https://ahlanandaman.in";
   const now = new Date();
   const pages = [
     { url: "/", priority: 1.0, changeFreq: "daily" as const },
