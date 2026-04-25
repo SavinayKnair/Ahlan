@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "if [ -z \"$OPENNEXT_BUILD\" ]; then export OPENNEXT_BUILD=1 && opennextjs-cloudflare build; else next build; fi",
     "start": "next start",
     "lint": "next lint",
     "cf-build": "opennextjs-cloudflare build",
