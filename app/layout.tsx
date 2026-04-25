@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   title: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
   description:
     "Experience premium luxury homestay in Port Blair, Andaman. Spacious 300+ sq ft AC rooms, hotel-grade comfort, island packages, airport transfers & personalized hospitality. Book now & get 10% off!",
+  icons: {
+    icon: '/favicon.png',
+    apple: '/apple-touch-icon.png',
+  },
   keywords: [
     "Andaman homestay",
     "best homestay in Andaman",
