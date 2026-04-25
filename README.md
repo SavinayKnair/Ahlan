@@ -36,3 +36,4 @@ npm run deploy
 - **Database**: Cloudflare D1 (SQLite) - *Free up to 5M reads/day*
 - **Images**: Next.js Static Assets - *Zero cost*
 - **SEO**: Fully optimized for Google Lighthouse with static assets.
+ 
