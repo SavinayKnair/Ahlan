@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "if [ -z \"$OPENNEXT_BUILD\" ]; then export OPENNEXT_BUILD=1 && opennextjs-cloudflare build; else next build; fi",
-    "start": "next start",
-    "lint": "next lint",
-    "cf-build": "opennextjs-cloudflare build",
-    "deploy": "npm run cf-build && wrangler deploy"
+    "build": "next build",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev .vercel/output/static --compatibility-flag nodejs_compat",
+    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
@@ -31,6 +30,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.16.0",
     "@opennextjs/cloudflare": "^1.19.4",
     "@types/node": "^20",
     "@types/react": "^18",

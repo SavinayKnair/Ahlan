@@ -1,13 +1,13 @@
 import { NextResponse } from 'next/server';
-import { getCloudflareContext } from '@opennextjs/cloudflare';
+import { getRequestContext } from '@cloudflare/next-on-pages';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'edge';
 
 export async function GET() {
   try {
-    const ctx = getCloudflareContext();
-    const db = ctx?.env?.DB;
+    const { env } = getRequestContext();
+    const db = env.DB;
 
     if (db) {
       // Fetch from D1

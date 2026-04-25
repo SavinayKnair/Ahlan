@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server';
-import { getCloudflareContext } from '@opennextjs/cloudflare';
+import { getRequestContext } from '@cloudflare/next-on-pages';
 
 export const runtime = 'edge';
 
 export async function GET() {
   try {
-    const ctx = getCloudflareContext();
-    const db = ctx?.env?.DB;
+    const { env } = getRequestContext();
+    const db = env.DB;
 
     if (db) {
       const rooms = await db.prepare("SELECT * FROM rooms").all();
@@ -44,8 +44,8 @@ export async function POST(req: Request) {
     const authCookie = req.headers.get('cookie')?.includes('ahlan_admin_session=true');
     if (!authCookie) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-    const ctx = getCloudflareContext();
-    const db = ctx?.env?.DB;
+    const { env } = getRequestContext();
+    const db = env.DB;
 
     if (db) {
       // Update Rooms
