@@ -20,8 +20,11 @@ export const metadata: Metadata = {
   description:
     "Experience premium luxury homestay in Port Blair, Andaman. Spacious 300+ sq ft AC rooms, hotel-grade comfort, island packages, airport transfers & personalized hospitality. Book now & get 10% off!",
   icons: {
-    icon: '/favicon.ico?v=2',
-    apple: '/apple-touch-icon.png?v=2',
+    icon: [
+      { url: '/favicon.svg?v=3', type: 'image/svg+xml' },
+      { url: '/favicon.ico?v=3' },
+    ],
+    apple: '/apple-touch-icon.png?v=3',
   },
   keywords: [
     "Andaman homestay",
