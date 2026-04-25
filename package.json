@@ -30,7 +30,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.16.0",
+    "@cloudflare/next-on-pages": "latest",
     "@opennextjs/cloudflare": "^1.19.4",
     "@types/node": "^20",
     "@types/react": "^18",
