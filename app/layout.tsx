@@ -15,9 +15,8 @@ import CurrencyConverter from "@/components/CurrencyConverter";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-// ... existing metadata ...
-
-  title: "Ahlan Homestays | Best Luxury Homestay in Andaman & Nicobar Islands",
+  metadataBase: new URL("https://ahlanandaman.in"),
+  title: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
   description:
     "Experience premium luxury homestay in Port Blair, Andaman. Spacious 300+ sq ft AC rooms, hotel-grade comfort, island packages, airport transfers & personalized hospitality. Book now & get 10% off!",
   keywords: [
@@ -51,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://ahlanhomestays.com",
+    url: "https://ahlanandaman.in",
     siteName: "Ahlan Homestays",
     title: "Ahlan Homestays | Luxury Homestay in Andaman & Nicobar Islands",
     description:
@@ -72,7 +71,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://ahlanhomestays.com",
+    canonical: "https://ahlanandaman.in",
   },
   verification: {
     google: "google-site-verification-token",
