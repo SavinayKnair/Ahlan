@@ -16,12 +16,12 @@ export async function GET() {
       const settingsResult = await db.prepare("SELECT * FROM settings").all();
 
       // Format results
-      const rooms = roomsResult.results.map(r => ({
+      const rooms = roomsResult.results.map((r: any) => ({
         ...r,
         features: JSON.parse(r.features as string || '[]')
       }));
 
-      const packages = packagesResult.results.map(p => ({
+      const packages = packagesResult.results.map((p: any) => ({
         ...p,
         destinations: JSON.parse(p.destinations as string || '[]'),
         inclusions: JSON.parse(p.inclusions as string || '[]'),
@@ -40,23 +40,7 @@ export async function GET() {
       return NextResponse.json({ rooms, packages, settings });
     }
 
-    // Fallback for local development without D1
-    const fs = require('fs');
-    const path = require('path');
-    const dbPath = path.join(process.cwd(), 'database.json');
-    
-    if (!fs.existsSync(dbPath)) {
-      return NextResponse.json({ rooms: [], packages: [], settings: {} });
-    }
-    
-    const raw = fs.readFileSync(dbPath, 'utf8');
-    const data = JSON.parse(raw);
-    
-    return NextResponse.json({
-      rooms: data.rooms || [],
-      packages: data.packages || [],
-      settings: data.settings || {}
-    });
+    return NextResponse.json({ error: 'Database not bound' }, { status: 500 });
   } catch (error) {
     console.error("Pricing API Error:", error);
     return NextResponse.json({ error: 'Failed to load pricing data' }, { status: 500 });

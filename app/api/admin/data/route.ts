@@ -20,8 +20,8 @@ export async function GET() {
       });
 
       return NextResponse.json({
-        rooms: rooms.results.map(r => ({ ...r, features: JSON.parse(r.features as string || '[]') })),
-        packages: packages.results.map(p => ({ 
+        rooms: rooms.results.map((r: any) => ({ ...r, features: JSON.parse(r.features as string || '[]') })),
+        packages: packages.results.map((p: any) => ({ 
           ...p, 
           destinations: JSON.parse(p.destinations as string || '[]'),
           inclusions: JSON.parse(p.inclusions as string || '[]'),
@@ -32,12 +32,7 @@ export async function GET() {
       });
     }
 
-    // Local Fallback
-    const fs = require('fs');
-    const path = require('path');
-    const dbPath = path.join(process.cwd(), 'database.json');
-    if (!fs.existsSync(dbPath)) return NextResponse.json({ rooms: [], packages: [], bookings: [], settings: {} });
-    return NextResponse.json(JSON.parse(fs.readFileSync(dbPath, 'utf8')));
+    return NextResponse.json({ error: 'Database not bound' }, { status: 500 });
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
   }
@@ -103,15 +98,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ success: true });
     }
 
-    // Local Fallback
-    const fs = require('fs');
-    const path = require('path');
-    const dbPath = path.join(process.cwd(), 'database.json');
-    const currentData = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
-    const newData = { ...currentData, ...body };
-    fs.writeFileSync(dbPath, JSON.stringify(newData, null, 2));
-    
-    return NextResponse.json({ success: true, data: newData });
+    return NextResponse.json({ error: 'Database not bound' }, { status: 500 });
   } catch (error) {
     console.error("Admin Save Error:", error);
     return NextResponse.json({ error: 'Failed to save data' }, { status: 500 });

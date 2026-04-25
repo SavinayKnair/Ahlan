@@ -35,14 +35,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ success: true, url: publicUrl });
     }
 
-    // Local Fallback
-    const fs = require('fs');
-    const path = require('path');
-    const buffer = Buffer.from(bytes);
-    const uploadPath = path.join(process.cwd(), 'public/uploads', filename);
-    await fs.promises.writeFile(uploadPath, buffer);
-    
-    return NextResponse.json({ success: true, url: `/uploads/${filename}` });
+    return NextResponse.json({ error: 'Storage bucket not bound' }, { status: 500 });
   } catch (error) {
     console.error("Upload error:", error);
     return NextResponse.json({ error: 'Failed to upload file' }, { status: 500 });

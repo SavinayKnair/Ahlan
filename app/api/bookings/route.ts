@@ -43,33 +43,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ success: true, booking: { id: newBookingId, ...booking } });
     }
 
-    // Fallback for local development
-    const fs = require('fs');
-    const path = require('path');
-    const dbPath = path.join(process.cwd(), 'database.json');
-
-    const getDbData = () => {
-      if (!fs.existsSync(dbPath)) return { rooms: [], packages: [], bookings: [] };
-      const raw = fs.readFileSync(dbPath, 'utf8');
-      return JSON.parse(raw);
-    };
-
-    const saveDbData = (data: any) => {
-      fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
-    };
-
-    const newBooking = {
-      id: newBookingId,
-      timestamp,
-      status: "Pending",
-      ...booking
-    };
-
-    const localDb = getDbData();
-    localDb.bookings = [newBooking, ...(localDb.bookings || [])];
-    saveDbData(localDb);
-
-    return NextResponse.json({ success: true, booking: newBooking });
+    return NextResponse.json({ error: 'Database not bound' }, { status: 500 });
   } catch (error) {
     console.error("Booking save error:", error);
     return NextResponse.json({ error: 'Failed to save booking' }, { status: 500 });

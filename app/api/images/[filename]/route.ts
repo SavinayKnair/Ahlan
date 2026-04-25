@@ -5,10 +5,10 @@ export const runtime = 'edge';
 
 export async function GET(
   req: Request,
-  { params }: { params: { filename: string } }
+  { params }: { params: Promise<{ filename: string }> }
 ) {
   try {
-    const { filename } = params;
+    const { filename } = await params;
     const ctx = getRequestContext();
     const bucket = ctx?.env?.BUCKET;
 
