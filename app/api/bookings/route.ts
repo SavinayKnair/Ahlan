@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getRequestContext } from '@cloudflare/next-on-pages';
+import { getCloudflareContext } from '@opennextjs/cloudflare';
 
 export const runtime = 'edge';
 
@@ -12,7 +12,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Name and Phone are required' }, { status: 400 });
     }
 
-    const ctx = getRequestContext();
+    const ctx = getCloudflareContext();
     const db = ctx?.env?.DB;
 
     const newBookingId = `AHL-${Date.now().toString().slice(-6)}`;

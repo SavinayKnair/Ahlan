@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server';
-import { getRequestContext } from '@cloudflare/next-on-pages';
+import { getCloudflareContext } from '@opennextjs/cloudflare';
 
 export const runtime = 'edge';
 
 export async function GET() {
   try {
-    const ctx = getRequestContext();
+    const ctx = getCloudflareContext();
     const db = ctx?.env?.DB;
 
     if (db) {
@@ -44,7 +44,7 @@ export async function POST(req: Request) {
     const authCookie = req.headers.get('cookie')?.includes('ahlan_admin_session=true');
     if (!authCookie) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-    const ctx = getRequestContext();
+    const ctx = getCloudflareContext();
     const db = ctx?.env?.DB;
 
     if (db) {

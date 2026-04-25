@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server';
-import { getRequestContext } from '@cloudflare/next-on-pages';
+import { getCloudflareContext } from '@opennextjs/cloudflare';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'edge';
 
 export async function GET() {
   try {
-    const ctx = getRequestContext();
+    const ctx = getCloudflareContext();
     const db = ctx?.env?.DB;
 
     if (db) {

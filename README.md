@@ -1,6 +1,6 @@
-## Cloudflare D1 & R2 Deployment
+## Cloudflare D1 & R2 Deployment (via OpenNext)
 
-This project is optimized for Cloudflare Pages with D1 Database and R2 Storage.
+This project is optimized for Cloudflare Workers using OpenNext with D1 Database and R2 Storage.
 
 ### 1. Prerequisites
 - [Cloudflare Account](https://dash.cloudflare.com/)
@@ -26,18 +26,18 @@ npx wrangler r2 bucket create ahlan-assets
 ```
 
 ### 4. Local Development
-To run locally with D1/R2 bindings:
+To run locally:
 ```bash
-npm run pages:preview
+npm run dev
 ```
 
 ### 5. Deployment
 ```bash
-npm run pages:deploy
+npm run deploy
 ```
 
 ## Architecture
-- **Runtime**: Cloudflare Workers (via Next.js Edge Runtime)
+- **Runtime**: Cloudflare Workers (via OpenNext)
 - **Database**: Cloudflare D1 (SQLite)
 - **Storage**: Cloudflare R2
 - **Persistence**: No more `database.json` in production! All changes via the Admin Panel persist in D1.

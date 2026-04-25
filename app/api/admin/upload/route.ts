@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getRequestContext } from '@cloudflare/next-on-pages';
+import { getCloudflareContext } from '@opennextjs/cloudflare';
 
 export const runtime = 'edge';
 
@@ -21,7 +21,7 @@ export async function POST(req: Request) {
     const bytes = await file.arrayBuffer();
     const filename = `${Date.now()}-${file.name.replace(/\s+/g, '-')}`;
 
-    const ctx = getRequestContext();
+    const ctx = getCloudflareContext();
     const bucket = ctx?.env?.BUCKET;
 
     if (bucket) {
