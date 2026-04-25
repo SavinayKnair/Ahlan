@@ -48,7 +48,7 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/50 to-transparent" />
               
               {/* Subtle floating particles for luxury feel */}
-              {Array.from({ length: 5 }).map((_, i) => (
+              {typeof window !== 'undefined' && Array.from({ length: 5 }).map((_, i) => (
                 <div
                   key={i}
                   className="absolute w-1 h-1 rounded-full bg-champagne/60 shadow-gold-glow animate-pulse"

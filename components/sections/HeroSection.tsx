@@ -7,19 +7,19 @@ import { useBooking } from "../BookingProvider";
 
 const WHATSAPP_NUMBER = "919434281386";
 
-const particles = Array.from({ length: 20 }, (_, i) => ({
-  id: i,
-  size: Math.random() * 4 + 2,
-  left: Math.random() * 100,
-  delay: Math.random() * 8,
-  duration: Math.random() * 6 + 8,
-}));
-
 export default function HeroSection() {
   const [loaded, setLoaded] = useState(false);
+  const [clientParticles, setClientParticles] = useState<{id: number, size: number, left: number, delay: number, duration: number}[]>([]);
   const { openBooking } = useBooking();
 
   useEffect(() => {
+    setClientParticles(Array.from({ length: 20 }, (_, i) => ({
+      id: i,
+      size: Math.random() * 4 + 2,
+      left: Math.random() * 100,
+      delay: Math.random() * 8,
+      duration: Math.random() * 6 + 8,
+    })));
     const t = setTimeout(() => setLoaded(true), 100);
     return () => clearTimeout(t);
   }, []);
@@ -52,7 +52,7 @@ export default function HeroSection() {
       </div>
 
       {/* Floating particles */}
-      {particles.map((p) => (
+      {clientParticles.map((p) => (
         <div
           key={p.id}
           className="particle z-10"
