@@ -1,0 +1,559 @@
+{
+  "rooms": [
+    {
+      "id": "deluxe-garden",
+      "name": "Deluxe Garden View Room",
+      "size": "300+ sq ft",
+      "guests": "Max 3 Guests",
+      "basePrice": 2999,
+      "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800",
+      "desc": "Wake up to tropical greenery. Spacious deluxe room with premium furnishings, king-size bed, and premium ensuite bathroom.",
+      "features": [
+        "King-Size Bed",
+        "AC",
+        "Smart TV",
+        "Premium Bath",
+        "Free WiFi",
+        "Daily Cleaning"
+      ],
+      "tag": "Garden Views",
+      "tagColor": "bg-palm",
+      "availability": "3 Rooms Left Today"
+    },
+    {
+      "id": "deluxe-premium",
+      "name": "Deluxe Premium Stay Room",
+      "size": "300+ sq ft",
+      "guests": "Max 3 Guests",
+      "basePrice": 3499,
+      "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&q=80&w=800",
+      "desc": "Elevated comfort with higher floor views and upgraded amenities. Perfect for couples seeking a touch of extra luxury.",
+      "features": [
+        "King-Size Bed",
+        "AC",
+        "Smart TV",
+        "Premium Bath",
+        "Free WiFi",
+        "Daily Cleaning"
+      ],
+      "tag": "Most Popular",
+      "tagColor": "bg-champagne",
+      "availability": "Only 1 Left This Weekend"
+    },
+    {
+      "id": "deluxe-family",
+      "name": "Deluxe Family Comfort Room",
+      "size": "350+ sq ft",
+      "guests": "Max 4 Guests",
+      "basePrice": 4499,
+      "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80&w=800",
+      "desc": "Generously sized for families. Extra bedding options, separate seating area, and child-friendly setup.",
+      "features": [
+        "Multiple Beds",
+        "AC",
+        "Smart TV",
+        "Premium Bath",
+        "Free WiFi",
+        "Daily Cleaning"
+      ],
+      "tag": "Family Favourite",
+      "tagColor": "bg-ocean-light",
+      "availability": "Available for Selected Dates"
+    },
+    {
+      "id": "deluxe-couple",
+      "name": "Deluxe Couple Retreat Room",
+      "size": "300+ sq ft",
+      "guests": "Max 2 Guests",
+      "basePrice": 4999,
+      "image": "/images/room-deluxe-couple.png",
+      "desc": "Romantic premium setup with optional rose petal décor, private balcony access, and personalized turndown service.",
+      "features": [
+        "King-Size Bed",
+        "AC",
+        "Smart TV",
+        "Premium Bath",
+        "Free WiFi",
+        "Rose Décor Option"
+      ],
+      "tag": "Romantic",
+      "tagColor": "bg-rose-500",
+      "availability": "2 Rooms Available"
+    }
+  ],
+  "packages": [
+    {
+      "id": "p1",
+      "title": "Romantic Honeymoon Escape",
+      "duration": "4 Nights / 5 Days",
+      "basePrice": 29999,
+      "priceSuffix": "/couple",
+      "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&q=80&w=800",
+      "badge": "Couple Favourite",
+      "badgeColor": "bg-rose-500",
+      "desc": "A magical romantic getaway featuring private beach dinners, photoshoots, and sunset cruises.",
+      "destinations": [
+        "Port Blair",
+        "Havelock Island",
+        "Neil Island"
+      ],
+      "inclusions": [
+        "Deluxe Stay",
+        "All Ferry Tickets",
+        "Candlelight Dinner",
+        "Beach Photoshoot",
+        "Couples Spa",
+        "Airport Transfers"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival & Sunset Cruise",
+          "desc": "Airport pickup, check-in to Honeymoon Suite. Evening sunset cruise at Port Blair harbour."
+        },
+        {
+          "day": 2,
+          "title": "Havelock Island & Radhanagar",
+          "desc": "Premium ferry to Havelock. Visit Asia's best beach, Radhanagar. Evening candlelight dinner."
+        },
+        {
+          "day": 3,
+          "title": "Elephant Beach Snorkeling",
+          "desc": "Private boat to Elephant Beach for snorkeling. Afternoon couples spa session."
+        },
+        {
+          "day": 4,
+          "title": "Neil Island Romance",
+          "desc": "Ferry to Neil Island. Visit Natural Bridge and Laxmanpur beach sunset. Return to Port Blair."
+        },
+        {
+          "day": 5,
+          "title": "Departure",
+          "desc": "Breakfast and airport drop with unforgettable memories."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "Family Discovery Tour",
+      "duration": "5 Nights / 6 Days",
+      "basePrice": 18999,
+      "priceSuffix": "/person",
+      "image": "https://images.unsplash.com/photo-1602088113235-229c19758e9f?auto=format&fit=crop&q=80&w=800",
+      "badge": "Family Recommended",
+      "badgeColor": "bg-palm",
+      "desc": "Safe, comfortable, and engaging trip designed perfectly for families with children of all ages.",
+      "destinations": [
+        "Port Blair",
+        "Havelock Island",
+        "Ross Island"
+      ],
+      "inclusions": [
+        "Family Suite Stay",
+        "All Ferry Tickets",
+        "Glass-Bottom Boat",
+        "Kids Activity Kit",
+        "Daily Breakfast",
+        "Airport Transfers"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival & Cellular Jail",
+          "desc": "Airport pickup. Evening visit to Cellular Jail and Light & Sound show."
+        },
+        {
+          "day": 2,
+          "title": "Ross Island & North Bay",
+          "desc": "Glass bottom boat ride to see corals. Historical tour of Ross Island."
+        },
+        {
+          "day": 3,
+          "title": "Havelock Island",
+          "desc": "Ferry to Havelock. Family time at Radhanagar beach."
+        },
+        {
+          "day": 4,
+          "title": "Elephant Beach",
+          "desc": "Safe snorkeling and water sports for the family at Elephant Beach."
+        },
+        {
+          "day": 5,
+          "title": "Return to Port Blair",
+          "desc": "Souvenir shopping and visit to Samudrika Marine Museum."
+        },
+        {
+          "day": 6,
+          "title": "Departure",
+          "desc": "Airport drop."
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "Premium Island Luxury Tour",
+      "duration": "6 Nights / 7 Days",
+      "basePrice": 34556,
+      "priceSuffix": "/person",
+      "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&q=80&w=800",
+      "badge": "Most Popular",
+      "badgeColor": "bg-champagne",
+      "desc": "The ultimate Andaman experience. VIP transfers, premium stays, and exclusive island tours.",
+      "destinations": [
+        "Port Blair",
+        "Havelock",
+        "Neil",
+        "Baratang"
+      ],
+      "inclusions": [
+        "Premium Room",
+        "Makruzz VIP Ferry",
+        "Private Cab",
+        "Scuba Diving",
+        "Limestone Caves",
+        "All Meals"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "VIP Arrival",
+          "desc": "Welcome drinks, check-in. Evening at Corbyn's Cove beach."
+        },
+        {
+          "day": 2,
+          "title": "Baratang Island",
+          "desc": "Early morning trip through Jarawa reserve to Limestone Caves."
+        },
+        {
+          "day": 3,
+          "title": "Havelock Island",
+          "desc": "VIP ferry to Havelock. Sunset at Radhanagar Beach."
+        },
+        {
+          "day": 4,
+          "title": "Scuba Experience",
+          "desc": "Introductory scuba diving with PADI certified instructors."
+        },
+        {
+          "day": 5,
+          "title": "Neil Island",
+          "desc": "Ferry to Neil Island. Relax at Bharatpur beach."
+        },
+        {
+          "day": 6,
+          "title": "Port Blair Heritage",
+          "desc": "Return to Port Blair. City tour and shopping."
+        },
+        {
+          "day": 7,
+          "title": "Departure",
+          "desc": "VIP airport transfer."
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "Workation + Vacation Plan",
+      "duration": "14 Nights / 15 Days",
+      "basePrice": 45000,
+      "priceSuffix": "/person",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
+      "badge": "Long Stay",
+      "badgeColor": "bg-ocean-light",
+      "desc": "Work remotely with 100Mbps WiFi during the week, explore tropical paradise on the weekends.",
+      "destinations": [
+        "Port Blair Base",
+        "Weekend Islands"
+      ],
+      "inclusions": [
+        "Deluxe Room",
+        "100Mbps WiFi",
+        "Work Desk",
+        "Weekend Island Trips",
+        "Laundry",
+        "Breakfast"
+      ],
+      "itinerary": [
+        {
+          "day": "Mon-Fri",
+          "title": "Remote Work Setup",
+          "desc": "High-speed WiFi, dedicated workspace, endless coffee."
+        },
+        {
+          "day": "Weekends",
+          "title": "Island Hopping",
+          "desc": "Guided weekend trips to Havelock, Neil, and Ross Islands."
+        },
+        {
+          "day": "Anytime",
+          "title": "Local Exploration",
+          "desc": "Evening visits to local cafes and sunset points."
+        }
+      ]
+    }
+  ],
+  "bookings": [
+    {
+      "id": "AHL-358362",
+      "timestamp": "2026-04-25T02:32:38.362Z",
+      "status": "Pending",
+      "type": "Room Booking",
+      "name": "hhh",
+      "phone": "9999",
+      "email": "savinayknair@gmail.com",
+      "country": "India",
+      "checkIn": "2026-04-26",
+      "checkOut": "2026-04-29",
+      "guests": "2A, 0C",
+      "roomType": "Deluxe Family Comfort Room",
+      "addons": "Music System, Candlelight Dinner, Airport Pickup, Airport Drop",
+      "notes": "hiii"
+    },
+    {
+      "id": "AHL-053054",
+      "timestamp": "2026-04-24T13:24:13.054Z",
+      "status": "Pending",
+      "type": "Room Booking",
+      "name": "Savinay K",
+      "phone": "9778230231",
+      "email": "savinayknair@gmail.com",
+      "country": "India",
+      "checkIn": "2026-04-24",
+      "checkOut": "2026-04-28",
+      "guests": "2A, 2C",
+      "roomType": "Deluxe Premium Stay Room",
+      "addons": "🚗 Airport Pickup, 🚕 Airport Drop, ⛴️ Ferry Assistance",
+      "notes": "Veg Food"
+    },
+    {
+      "id": "AHL-034342",
+      "timestamp": "2026-04-24T13:23:54.342Z",
+      "status": "Pending",
+      "type": "Room Booking",
+      "name": "Savinay K",
+      "phone": "9778230231",
+      "email": "savinayknair@gmail.com",
+      "country": "India",
+      "checkIn": "2026-04-24",
+      "checkOut": "2026-04-28",
+      "guests": "2A, 2C",
+      "roomType": "Deluxe Premium Stay Room",
+      "addons": "🚗 Airport Pickup, 🚕 Airport Drop, ⛴️ Ferry Assistance",
+      "notes": "Veg Food"
+    },
+    {
+      "id": "AHL-892337",
+      "timestamp": "2026-04-24T13:21:32.337Z",
+      "status": "Pending",
+      "type": "General Inquiry",
+      "name": "llll",
+      "phone": "00000",
+      "email": "N/A",
+      "country": "India",
+      "checkIn": "10 mar",
+      "checkOut": "N/A",
+      "guests": "2",
+      "roomType": "Stay",
+      "addons": "",
+      "notes": "....."
+    },
+    {
+      "id": "AHL-215728",
+      "timestamp": "2026-04-24T13:10:15.728Z",
+      "status": "Pending",
+      "type": "General Inquiry",
+      "name": "Test User",
+      "phone": "9999911111",
+      "email": "N/A",
+      "country": "India",
+      "checkIn": "1-10 May 20261-10 May 2026Test booking ",
+      "checkOut": "N/A",
+      "guests": "2",
+      "roomType": "Stay",
+      "addons": "",
+      "notes": "Test booking request.request."
+    },
+    {
+      "id": "AHL-039122",
+      "timestamp": "2026-04-24T13:07:19.122Z",
+      "status": "Pending",
+      "type": "General Inquiry",
+      "name": "Test User",
+      "phone": "9999911111",
+      "email": "N/A",
+      "country": "India",
+      "checkIn": "1-10 May 20261-10 May 2026Test booking ",
+      "checkOut": "N/A",
+      "guests": "2",
+      "roomType": "Stay",
+      "addons": "",
+      "notes": "Test booking request.request."
+    },
+    {
+      "id": "AHL-469506",
+      "timestamp": "2026-04-24T12:24:29.506Z",
+      "status": "Pending",
+      "type": "General Inquiry",
+      "name": "gggg",
+      "phone": "00000",
+      "email": "N/A",
+      "country": "India",
+      "checkIn": "55",
+      "checkOut": "N/A",
+      "guests": "2",
+      "roomType": "Stay",
+      "addons": "",
+      "notes": ""
+    },
+    {
+      "id": "AHL-283766",
+      "timestamp": "2026-04-24T12:21:23.766Z",
+      "status": "Pending",
+      "type": "General Inquiry",
+      "name": "Test Guest",
+      "phone": "9999911111",
+      "email": "N/A",
+      "country": "India",
+      "checkIn": "12-14 Apr",
+      "checkOut": "N/A",
+      "guests": "2",
+      "roomType": "Stay",
+      "addons": "",
+      "notes": ""
+    },
+    {
+      "id": "AHL-882445",
+      "timestamp": "2026-04-24T12:14:42.445Z",
+      "status": "Pending",
+      "type": "General Inquiry",
+      "name": "ddbeaduefw",
+      "phone": "677877888",
+      "email": "N/A",
+      "country": "India",
+      "checkIn": "15-21",
+      "checkOut": "N/A",
+      "guests": "2",
+      "roomType": "Stay",
+      "addons": "",
+      "notes": ""
+    },
+    {
+      "id": "AHL-358876",
+      "timestamp": "2026-04-24T12:05:58.876Z",
+      "status": "Completed",
+      "type": "General Inquiry",
+      "name": "sss",
+      "phone": "11111",
+      "email": "N/A",
+      "country": "India",
+      "checkIn": "12-14 apr",
+      "checkOut": "N/A",
+      "guests": "2",
+      "roomType": "Stay",
+      "addons": "",
+      "notes": "....."
+    },
+    {
+      "id": "AHL-026206",
+      "timestamp": "2026-04-24T12:00:26.206Z",
+      "status": "Pending",
+      "type": "General Inquiry",
+      "name": "sss",
+      "phone": "11111",
+      "email": "N/A",
+      "country": "India",
+      "checkIn": "12-14 apr",
+      "checkOut": "N/A",
+      "guests": "2",
+      "roomType": "Stay",
+      "addons": "",
+      "notes": "....."
+    },
+    {
+      "id": "AHL-658083",
+      "timestamp": "2026-04-24T11:54:18.083Z",
+      "status": "Pending",
+      "type": "Package Booking",
+      "name": "Savinay",
+      "phone": "000000000",
+      "email": "ljnjknk",
+      "country": "India",
+      "checkIn": "2026-04-24",
+      "checkOut": "N/A",
+      "guests": "2A, 0C",
+      "roomType": "3N/4D",
+      "addons": "🐠 Snorkeling, 🪂 Parasailing, 🍽️ Candlelight Dinner",
+      "notes": "that's all"
+    },
+    {
+      "id": "AHL-469016",
+      "timestamp": "2026-04-24T11:51:09.016Z",
+      "status": "Rejected",
+      "type": "General Inquiry",
+      "name": "Savinay",
+      "phone": "0000000000",
+      "email": "N/A",
+      "country": "India",
+      "checkIn": "10 20",
+      "checkOut": "N/A",
+      "guests": "2",
+      "roomType": "Stay",
+      "addons": "",
+      "notes": "..."
+    },
+    {
+      "id": "AHL-465472",
+      "timestamp": "2026-04-24T11:51:05.472Z",
+      "status": "Confirmed",
+      "type": "General Inquiry",
+      "name": "Savinay",
+      "phone": "0000000000",
+      "email": "N/A",
+      "country": "India",
+      "checkIn": "10 20",
+      "checkOut": "N/A",
+      "guests": "2",
+      "roomType": "Stay",
+      "addons": "",
+      "notes": "..."
+    },
+    {
+      "id": "AHL-440655",
+      "timestamp": "2026-04-24T11:50:40.655Z",
+      "status": "Completed",
+      "type": "General Inquiry",
+      "name": "Savinay",
+      "phone": "0000000000",
+      "email": "N/A",
+      "country": "India",
+      "checkIn": "10 20",
+      "checkOut": "N/A",
+      "guests": "2",
+      "roomType": "Stay",
+      "addons": "",
+      "notes": "..."
+    }
+  ],
+  "settings": {
+    "addonPrices": {
+      "Airport Pickup": 800,
+      "Airport Drop": 800,
+      "Honeymoon Decoration": 1500,
+      "Anniversary Decoration": 1500,
+      "Extra Mattress": 700,
+      "Candlelight Setup": 2000,
+      "Breakfast Upgrade": 300,
+      "Scuba Diving": 3500,
+      "Snorkeling": 1000,
+      "Parasailing": 3000,
+      "Candlelight Dinner": 2500,
+      "Photography": 5000,
+      "Private Cab": 2500,
+      "Island Guide": 1000,
+      "Music System": 1000
+    },
+    "hourlyRate": 166,
+    "taxes": 0,
+    "seasonalRateMultiplier": 1
+  }
+}
