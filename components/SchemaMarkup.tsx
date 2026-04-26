@@ -2,20 +2,21 @@ import Script from "next/script";
 
 export default function SchemaMarkup() {
   const siteName = "Ahlanandaman.in";
+  const orgName = "Ahlan Homestay";
   const baseUrl = "https://ahlanandaman.in";
 
   const webSiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": siteName,
-    "alternateName": ["Ahlan Homestays", "Ahlan Andaman"],
+    "alternateName": [orgName, "Ahlan Andaman"],
     "url": baseUrl
   };
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": ["LodgingBusiness", "BedAndBreakfast"],
-    name: "Ahlanandaman.in",
+    name: orgName,
     description:
       "Premium Gold Category Homestay in Port Blair, Andaman & Nicobar Islands. Spacious 300+ sq ft deluxe AC rooms, curated island packages, airport transfers and world-class hospitality.",
     url: baseUrl,
@@ -72,15 +73,15 @@ export default function SchemaMarkup() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "What is Ahlanandaman.in?",
+        name: `What is ${siteName}?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ahlanandaman.in is a Premium Gold Category Homestay in Port Blair, Andaman & Nicobar Islands. We offer spacious 300+ sq ft deluxe AC rooms with hotel-grade comfort and homely warmth.",
+          text: `${siteName} is a Premium Gold Category Homestay in Port Blair, Andaman & Nicobar Islands. We offer spacious 300+ sq ft deluxe AC rooms with hotel-grade comfort and homely warmth.`,
         },
       },
       {
         "@type": "Question",
-        name: "Where is Ahlanandaman.in located?",
+        name: `Where is ${siteName} located?`,
         acceptedAnswer: {
           "@type": "Answer",
           text: "We are located in Port Blair, Andaman & Nicobar Islands, close to Cellular Jail, Corbyn's Cove Beach, and Veer Savarkar International Airport.",
@@ -88,7 +89,7 @@ export default function SchemaMarkup() {
       },
       {
         "@type": "Question",
-        name: "What amenities does Ahlanandaman.in offer?",
+        name: `What amenities does ${siteName} offer?`,
         acceptedAnswer: {
           "@type": "Answer",
           text: "We offer AC rooms with premium washrooms, high-speed WiFi, Smart TV, daily housekeeping, airport pickup/drop, breakfast, local travel guidance, and curated island sightseeing packages.",
