@@ -83,13 +83,9 @@ const amenityIcons: Record<string, React.ElementType> = {
   "Premium Bath": ShowerHead,
   "Free WiFi": Wifi,
   "Daily Cleaning": Sparkles,
-  "Rose Décor Option": HeartIcon,
+  "Rose Décor Option": MapPin,
   "Soundproof Windows": MapPin,
 };
-
-function HeartIcon(props: any) {
-  return <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-}
 
 export default function RoomSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -170,7 +166,7 @@ export default function RoomSection() {
 
                   {/* Features */}
                   <div className="grid grid-cols-2 gap-y-3 gap-x-2 mb-6">
-                    {room.features.map((f: string) => {
+                    {(room.features || []).map((f: string) => {
                       const Icon = amenityIcons[f] || Sparkles;
                       return (
                         <div key={f} className="flex items-center gap-2 text-[11px] font-medium text-gray-700 dark:text-gray-300 font-sans">
@@ -213,79 +209,6 @@ export default function RoomSection() {
             </div>
             <span className="text-[10px] text-warmgray font-sans uppercase tracking-widest">Scroll to explore</span>
           </div>
-        </div>
-      </div>
-    </section>
-              {/* Room Visual */}
-              <div className="relative h-64 overflow-hidden bg-gray-200">
-                <Image src={room.image} alt={room.name} fill className="object-cover group-hover:scale-110 transition-transform duration-700" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                
-                {room.tag && (
-                  <span className={`absolute top-4 left-4 ${room.tagColor} text-white text-[10px] font-bold px-3 py-1.5 rounded-full font-sans uppercase tracking-wider shadow-lg`}>
-                    {room.tag}
-                  </span>
-                )}
-                
-                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                  <div className="bg-white/20 backdrop-blur-md rounded-xl px-3 py-1.5 flex items-center gap-1.5 border border-white/30">
-                    <Maximize className="w-3.5 h-3.5 text-white" />
-                    <span className="text-white text-xs font-semibold font-sans">{room.size}</span>
-                  </div>
-                  <div className="bg-white/20 backdrop-blur-md rounded-xl px-3 py-1.5 flex items-center gap-1.5 border border-white/30">
-                    <Users className="w-3.5 h-3.5 text-white" />
-                    <span className="text-white text-xs font-semibold font-sans">{room.guests}</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="mb-3">
-                  <h3 className="font-serif font-bold text-xl text-midnight dark:text-white leading-tight">{room.name}</h3>
-                </div>
-                
-                {/* Availability Badge */}
-                <div className="mb-4 inline-flex items-center gap-1.5 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 text-xs font-semibold px-3 py-1.5 rounded-lg border border-green-200 dark:border-green-800/30 w-fit">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                  </span>
-                  {room.availability}
-                </div>
-
-                <p className="text-sm text-warmgray dark:text-gray-400 font-sans leading-relaxed mb-6 flex-1">{room.desc}</p>
-
-                {/* Features */}
-                <div className="grid grid-cols-2 gap-y-3 gap-x-2 mb-6">
-                  {room.features.map((f: string) => {
-                    const Icon = amenityIcons[f] || Sparkles;
-                    return (
-                      <div key={f} className="flex items-center gap-2 text-[11px] font-medium text-gray-700 dark:text-gray-300 font-sans">
-                        <Icon className="w-3.5 h-3.5 text-champagne shrink-0" />{f}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* Price + CTA */}
-                <div className="pt-5 border-t border-gray-100 dark:border-white/10 mt-auto">
-                  <div className="flex items-end justify-between mb-4">
-                    <div>
-                      <div className="text-[10px] uppercase tracking-wider text-warmgray font-sans mb-1">Starting from</div>
-                      <div className="font-serif text-2xl font-bold text-gradient-gold leading-none">{formatPrice(room.basePrice)}</div>
-                    </div>
-                    <div className="text-xs text-warmgray dark:text-gray-400 font-sans mb-0.5">/ night</div>
-                  </div>
-                  <button
-                    onClick={() => openBooking("room", room.name, "")}
-                    className="w-full btn-primary text-sm py-3.5 shadow-gold-glow hover:shadow-xl transition-shadow"
-                  >
-                    Book Room
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>
