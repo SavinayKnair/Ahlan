@@ -1,12 +1,12 @@
-import { MetadataRoute } from 'next'
- 
+import { MetadataRoute } from "next";
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: '/admin/',
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/admin/", "/api/"],
     },
-    sitemap: 'https://ahlanandaman.in/sitemap.xml',
-  }
+    sitemap: "https://ahlanandaman.in/sitemap.xml",
+  };
 }
