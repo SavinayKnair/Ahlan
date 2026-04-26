@@ -372,7 +372,7 @@ export default function ThingsToDo() {
             className="text-center mb-16"
           >
             <div className="badge-gold mx-auto mb-6 w-fit">
-              <Sparkles className="w-3.5 h-3.5" /> Island Guide
+              <Sparkles className="w-3.5 h-3.5" /> Explore Andaman
             </div>
             <h2 className="section-title text-midnight dark:text-white mb-4">
               Explore <span className="text-gradient-gold">Andaman</span> With Us

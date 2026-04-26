@@ -215,7 +215,7 @@ export default function BlogSection() {
           className="text-center mb-16"
         >
           <div className="badge-gold mx-auto mb-6 w-fit">
-            <BookOpen className="w-3.5 h-3.5" /> Travel Insights
+            <BookOpen className="w-3.5 h-3.5" /> Travel Guides
           </div>
           <h2 className="section-title text-midnight dark:text-white mb-4">
             Andaman Travel <span className="text-gradient-gold">Guides</span>
