@@ -6,7 +6,6 @@
   </defs>
   <g clip-path="url(#circleView)">
     <rect width="32" height="32" fill="white" />
-    <!-- We center the logo and scale it to fit the circle -->
-    <image xlink:href="/images/logo.png" x="-2" y="-4" width="36" height="36" />
+    <image href="data:image/png;base64,$LOGO_BASE64" x="0" y="0" width="32" height="32" />
   </g>
 </svg>

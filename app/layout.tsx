@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   icons: {
     icon: [
-      { url: '/favicon.png?v=4', type: 'image/png', sizes: '32x32' },
-      { url: '/favicon.svg?v=4', type: 'image/svg+xml' },
-      { url: '/favicon.ico?v=4' },
+      { url: '/favicon.png?v=5', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon.svg?v=5', type: 'image/svg+xml' },
+      { url: '/favicon.ico?v=5' },
     ],
-    apple: '/apple-touch-icon.png?v=4',
+    apple: '/apple-touch-icon.png?v=5',
   },
   keywords: [
     "Andaman homestay",
