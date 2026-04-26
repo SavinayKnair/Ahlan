@@ -76,7 +76,7 @@ export default function CountdownSection() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/919434281386?text=Hi! I want to claim the flash sale offer at Ahlan Homestays!" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2">
+            <a href="https://wa.me/919434281386?text=Hi! I want to claim the flash sale offer at Ahlan Homestay!" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2">
               <Tag className="w-4 h-4" /> Claim Offer Now
             </a>
             <a href="/packages" className="btn-secondary border-white text-white hover:bg-white hover:text-midnight">

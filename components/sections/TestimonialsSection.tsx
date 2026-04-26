@@ -10,7 +10,7 @@ const reviews = [
     avatar: "👩‍❤️‍👨",
     rating: 5,
     tag: "Honeymoon",
-    text: "Ahlan Homestays exceeded every expectation! The room was huge, spotlessly clean, and the team arranged everything from our ferry to candlelight dinner on the beach. Best honeymoon decision we ever made!",
+    text: "Ahlan Homestay exceeded every expectation! The room was huge, spotlessly clean, and the team arranged everything from our ferry to candlelight dinner on the beach. Best honeymoon decision we ever made!",
     date: "March 2026",
   },
   {

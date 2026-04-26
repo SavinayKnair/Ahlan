@@ -224,7 +224,7 @@ const destinations: Destination[] = [
     image: "/images/dest_chidiya.png",
     gallery: ["/images/dest_chidiya.png", "https://images.unsplash.com/photo-1528650392949-a681944510b6?auto=format&fit=crop&q=80&w=800"],
     location: "South Andaman",
-    distance: "25 km from Ahlan Homestays",
+    distance: "25 km from Ahlan Homestay",
     bestTime: "All Year (4 PM – 6 PM for sunset)",
     facts: [
       "Name translates to 'Bird Island' – rich birdwatching destination",
@@ -339,7 +339,7 @@ const destinations: Destination[] = [
     image: "/images/dest_corbyns.png",
     gallery: ["/images/dest_corbyns.png", "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800"],
     location: "Port Blair",
-    distance: "7 km from Ahlan Homestays",
+    distance: "7 km from Ahlan Homestay",
     bestTime: "All Year Round",
     facts: [
       "Closest beach to Port Blair city center",

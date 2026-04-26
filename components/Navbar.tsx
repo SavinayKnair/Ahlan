@@ -97,7 +97,7 @@ export default function Navbar() {
     setGoogleTranslateCookie(code);
   };
 
-  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi! I'd like to book a stay at Ahlan Homestays.`;
+  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi! I'd like to book a stay at Ahlan Homestay.`;
   const currentLang = LANGUAGES.find((l) => l.code === activeLang);
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -139,7 +139,7 @@ export default function Navbar() {
             <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-gold-glow flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/favicon.png"
-                alt="Ahlan Homestays Logo"
+                alt="Ahlan Homestay Logo"
                 fill
                 className="object-cover"
                 sizes="48px"

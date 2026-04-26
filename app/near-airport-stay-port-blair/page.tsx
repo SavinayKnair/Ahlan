@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Plane, Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Ahlan Homestay | Stay Near Airport Port Blair | Andaman",
-  description: "Looking for a homestay near Veer Savarkar Airport in Port Blair? Ahlan Homestay offers premium AC rooms with complimentary airport pickup & drop. 10 minutes from airport. Book now!",
+  title: "Ahlan Homestays | Stay Near Airport Port Blair | Andaman",
+  description: "Looking for a homestay near Veer Savarkar Airport in Port Blair? Ahlan Homestays offers premium AC rooms with complimentary airport pickup & drop. 10 minutes from airport. Book now!",
   keywords: "stay near airport Port Blair, homestay near airport Andaman, airport hotel Port Blair, accommodation near Port Blair airport",
   alternates: { canonical: "https://ahlanandaman.in/near-airport-stay-port-blair" },
 };
@@ -16,9 +16,9 @@ export default function NearAirportStayPortBlair() {
         <div className="text-5xl mb-4">✈️</div>
         <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">Stay Near <span className="text-champagne">Airport Port Blair</span></h1>
         <p className="font-sans text-white/80 text-xl max-w-2xl mx-auto mb-8">
-          Ahlan Homestay is just 10 minutes from Veer Savarkar International Airport with complimentary pickup & drop.
+          Ahlan Homestays is just 10 minutes from Veer Savarkar International Airport with complimentary pickup & drop.
         </p>
-        <a href="https://wa.me/919434281386?text=Hi! I'm landing at Port Blair Airport. I need a room with airport pickup at Ahlan Homestay." target="_blank" rel="noopener noreferrer" className="btn-primary text-base py-4 px-10 inline-block">
+        <a href="https://wa.me/919434281386?text=Hi! I'm landing at Port Blair Airport. I need a room with airport pickup at Ahlan Homestays." target="_blank" rel="noopener noreferrer" className="btn-primary text-base py-4 px-10 inline-block">
           ✈️ Arrange Airport Pickup
         </a>
       </div>

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import PackageSection from "@/components/sections/PackageSection";
 
 export const metadata: Metadata = {
-  title: "Ahlan Homestay | Andaman Tour Packages 2026 – Port Blair",
-  description: "Best Andaman tour packages from Ahlan Homestay. 3N/4D, 4N/5D (₹21,999), 5N/6D (₹25,555), Honeymoon, Family, Workation packages. Ferry, stay, sightseeing included. Use code A&NLUV10% for 10% off!",
-  keywords: "Andaman tour package, Port Blair package, honeymoon package Andaman, family package Andaman, Ahlan Homestay packages",
+  title: "Ahlan Homestays | Andaman Tour Packages 2026 – Port Blair",
+  description: "Best Andaman tour packages from Ahlan Homestays. 3N/4D, 4N/5D (₹21,999), 5N/6D (₹25,555), Honeymoon, Family, Workation packages. Ferry, stay, sightseeing included. Use code A&NLUV10% for 10% off!",
+  keywords: "Andaman tour package, Port Blair package, honeymoon package Andaman, family package Andaman, Ahlan Homestays packages",
 };
 
 export default function PackagesPage() {

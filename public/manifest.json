@@ -1,7 +1,7 @@
 {
-  "name": "Ahlanandaman.in",
-  "short_name": "Ahlanandaman.in",
-  "description": "Ahlan Homestay | Premium Gold Category Homestay in Port Blair",
+  "name": "ahlanandaman.in",
+  "short_name": "ahlanandaman.in",
+  "description": "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

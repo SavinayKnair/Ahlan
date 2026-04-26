@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import RoomSection from "@/components/sections/RoomSection";
 
 export const metadata: Metadata = {
-  title: "Ahlan Homestay | Deluxe Rooms in Port Blair – 300+ sq ft Premium AC Rooms",
-  description: "Book spacious 300+ sq ft deluxe AC rooms at Ahlan Homestay, Port Blair. Smart TV, premium washrooms, high-speed WiFi, daily cleaning, airport transfers. Gold Category Homestay.",
+  title: "Ahlan Homestays | Deluxe Rooms in Port Blair – 300+ sq ft Premium AC Rooms",
+  description: "Book spacious 300+ sq ft deluxe AC rooms at Ahlan Homestays, Port Blair. Smart TV, premium washrooms, high-speed WiFi, daily cleaning, airport transfers. Gold Category Homestay.",
   keywords: "deluxe rooms Port Blair, premium AC room Andaman, luxury homestay room Port Blair, 300 sq ft room Andaman",
 };
 

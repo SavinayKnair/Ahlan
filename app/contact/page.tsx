@@ -36,10 +36,10 @@ export default function ContactPage() {
             <div className="mt-10 space-y-3 hidden">
               <h3 className="font-serif font-semibold text-xl text-midnight dark:text-white mb-4">Quick Booking</h3>
               {[
-                { label: "🛏️ Book a Room", msg: "Hi! I'd like to book a room at Ahlan Homestay." },
+                { label: "🛏️ Book a Room", msg: "Hi! I'd like to book a room at Ahlan Homestays." },
                 { label: "📦 Package Inquiry", msg: "Hi! I'd like to know about your Andaman packages." },
-                { label: "💑 Honeymoon Package", msg: "Hi! We're planning our honeymoon at Ahlan Homestay." },
-                { label: "👨‍👩‍👧‍👦 Family Booking", msg: "Hi! We're a family interested in staying at Ahlan Homestay." },
+                { label: "💑 Honeymoon Package", msg: "Hi! We're planning our honeymoon at Ahlan Homestays." },
+                { label: "👨‍👩‍👧‍👦 Family Booking", msg: "Hi! We're a family interested in staying at Ahlan Homestays." },
               ].map((b) => (
                 <a key={b.label} href={`https://wa.me/919434281386?text=${encodeURIComponent(b.msg)}`} target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-3 w-full p-4 rounded-2xl bg-white dark:bg-white/5 hover:bg-champagne/5 border border-gray-100 dark:border-white/10 hover:border-champagne/30 transition-all font-sans text-sm font-medium text-midnight dark:text-white">
@@ -54,7 +54,7 @@ export default function ContactPage() {
               <form onSubmit={(e) => {
                 e.preventDefault();
                 const fd = new FormData(e.currentTarget);
-                const msg = `Hello Ahlan Homestay,\n\nName: ${fd.get('name')}\nPhone: ${fd.get('phone')}\nMessage: ${fd.get('message')}`;
+                const msg = `Hello Ahlan Homestays,\n\nName: ${fd.get('name')}\nPhone: ${fd.get('phone')}\nMessage: ${fd.get('message')}`;
                 window.open(`https://wa.me/919434281386?text=${encodeURIComponent(msg)}`, '_blank');
               }} className="space-y-4">
                 <div>
@@ -78,7 +78,7 @@ export default function ContactPage() {
             <h2 className="font-serif text-3xl font-bold text-midnight dark:text-white mb-8">Find Us</h2>
             <div className="rounded-3xl overflow-hidden shadow-luxury border border-champagne/10">
               <iframe
-                title="Ahlan Homestay Port Blair Map"
+                title="Ahlan Homestays Port Blair Map"
                 src="https://maps.google.com/maps?q=Ahlan%20Homestays,%20Port%20Blair&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%" height="400" loading="lazy" className="border-0 w-full block" allowFullScreen
               />

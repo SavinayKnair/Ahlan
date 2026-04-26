@@ -1,4 +1,4 @@
--- Ahlan Homestays D1 Seed Data (FREE Tier Optimized)
+-- Ahlan Homestay D1 Seed Data (FREE Tier Optimized)
 
 DELETE FROM rooms;
 INSERT INTO rooms (id, name, size, guests, basePrice, image, desc, features, tag, tagColor, availability) VALUES 

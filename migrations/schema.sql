@@ -1,4 +1,4 @@
--- Ahlan Homestays D1 Schema
+-- Ahlan Homestay D1 Schema
 
 -- Rooms Table
 CREATE TABLE IF NOT EXISTS rooms (

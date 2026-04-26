@@ -29,7 +29,7 @@ function getBotReply(msg: string): string {
 
   // Greetings
   if (m.includes("hello") || m.includes("hi") || m.includes("hey") || m.includes("namaste") || m.includes("salam"))
-    return "🌴 **Namaste Explorer!** Welcome to Ahlan Homestays — your basecamp for the ultimate Andaman adventure!\n\nI'm **Island Voyager**, your advanced travel guide. I don't just plan stays; I craft legendary experiences. Whether you're looking for hidden bioluminescent lagoons, the best local seafood, or a perfect island route, I've got the map ready.\n\nWhat's on your travel bucket list today?";
+    return "🌴 **Namaste Explorer!** Welcome to Ahlan Homestay — your basecamp for the ultimate Andaman adventure!\n\nI'm **Island Voyager**, your advanced travel guide. I don't just plan stays; I craft legendary experiences. Whether you're looking for hidden bioluminescent lagoons, the best local seafood, or a perfect island route, I've got the map ready.\n\nWhat's on your travel bucket list today?";
 
   // Honeymoon
   if (m.includes("honeymoon") || m.includes("couple") || m.includes("romantic") || m.includes("anniversary"))

@@ -2,7 +2,7 @@ import { FileText, Clock, CreditCard, AlertCircle, Info } from "lucide-react";
 
 export const metadata = {
   title: "Terms & Conditions | Ahlanandaman.in",
-  description: "Read the terms and conditions for booking and staying at Ahlan Homestay.",
+  description: "Read the terms and conditions for booking and staying at Ahlan Homestays.",
 };
 
 export default function TermsConditions() {
@@ -31,7 +31,7 @@ export default function TermsConditions() {
               <Info className="w-6 h-6 text-champagne" /> 1. Overview
             </h2>
             <p>
-              By booking a stay at Ahlan Homestay, you agree to comply with and be bound by the following terms and conditions. These terms govern your relationship with us and apply to all bookings made directly through our website, WhatsApp, or phone.
+              By booking a stay at Ahlan Homestays, you agree to comply with and be bound by the following terms and conditions. These terms govern your relationship with us and apply to all bookings made directly through our website, WhatsApp, or phone.
             </p>
           </section>
 
@@ -81,13 +81,13 @@ export default function TermsConditions() {
               <Info className="w-6 h-6 text-champagne" /> 5. Liability
             </h2>
             <p>
-              While we provide assistance with island packages and transfers, Ahlan Homestay is not liable for disruptions caused by weather conditions, ferry cancellations, or airline delays. We strongly recommend travel insurance for all guests.
+              While we provide assistance with island packages and transfers, Ahlan Homestays is not liable for disruptions caused by weather conditions, ferry cancellations, or airline delays. We strongly recommend travel insurance for all guests.
             </p>
           </section>
 
           <section className="pt-8 border-t border-gray-100 dark:border-white/10 text-center">
             <p className="text-sm font-serif italic">
-              "At Ahlan Homestay, we strive to make your stay magical. We look forward to welcoming you to paradise."
+              "At Ahlan Homestays, we strive to make your stay magical. We look forward to welcoming you to paradise."
             </p>
           </section>
         </div>

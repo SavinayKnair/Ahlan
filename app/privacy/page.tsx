@@ -2,7 +2,7 @@ import { ShieldCheck, Lock, Eye, FileText } from "lucide-react";
 
 export const metadata = {
   title: "Privacy Policy | Ahlanandaman.in",
-  description: "Learn how Ahlan Homestay protects your privacy and manages your personal data.",
+  description: "Learn how Ahlan Homestays protects your privacy and manages your personal data.",
 };
 
 export default function PrivacyPolicy() {
@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
               <Eye className="w-6 h-6 text-champagne" /> 1. Information We Collect
             </h2>
             <p>
-              At Ahlan Homestay, we collect information necessary to provide you with a premium hospitality experience. This includes:
+              At Ahlan Homestays, we collect information necessary to provide you with a premium hospitality experience. This includes:
             </p>
             <ul className="list-disc pl-6 mt-4 space-y-2">
               <li>Contact details (Name, Email, Phone Number)</li>

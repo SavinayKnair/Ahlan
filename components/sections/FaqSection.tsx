@@ -6,27 +6,27 @@ import { ChevronDown, ChevronUp, HelpCircle, Sparkles } from "lucide-react";
 
 const faqs = [
   {
-    q: "Where is Ahlan Homestays located in Port Blair?",
-    a: "Ahlan Homestays is located in Port Blair, Andaman & Nicobar Islands — close to the Cellular Jail, Corbyn's Cove Beach, and Veer Savarkar International Airport. We are easily accessible from all major landmarks.",
+    q: "Where is Ahlan Homestay located in Port Blair?",
+    a: "Ahlan Homestay is located in Port Blair, Andaman & Nicobar Islands — close to the Cellular Jail, Corbyn's Cove Beach, and Veer Savarkar International Airport. We are easily accessible from all major landmarks.",
   },
   {
-    q: "What makes Ahlan Homestays different from a regular homestay?",
+    q: "What makes Ahlan Homestay different from a regular homestay?",
     a: "We are a Gold Category Certified Premium Homestay — offering 300+ sq ft spacious deluxe AC rooms, premium washrooms, Smart TV, high-speed WiFi, daily housekeeping, and personalized service. Think of it as hotel comfort with the warmth of a home.",
   },
   {
     q: "What is included in the Andaman packages?",
-    a: "Our packages include: deluxe stay at Ahlan Homestays, ferry tickets (Port Blair ↔ Havelock ↔ Neil), daily breakfast, airport pickup & drop, sightseeing tours, and a dedicated trip coordinator. Premium packages also include scuba diving, parasailing, candlelight dinners and more.",
+    a: "Our packages include: deluxe stay at Ahlan Homestay, ferry tickets (Port Blair ↔ Havelock ↔ Neil), daily breakfast, airport pickup & drop, sightseeing tours, and a dedicated trip coordinator. Premium packages also include scuba diving, parasailing, candlelight dinners and more.",
   },
   {
     q: "Is there a promo code available?",
     a: "Yes! Use promo code A&NLUV10% on our 4N/5D (₹21,999/pax) and 5N/6D (₹25,555/pax) packages to get an extra 10% off. Share this code via WhatsApp when booking.",
   },
   {
-    q: "How do I book a room or package at Ahlan Homestays?",
+    q: "How do I book a room or package at Ahlan Homestay?",
     a: "You can book via WhatsApp at +91 9434281386, call us directly, or use the Book Now button on our website. We respond within minutes and confirm your booking same-day.",
   },
   {
-    q: "Is Ahlan Homestays suitable for international tourists?",
+    q: "Is Ahlan Homestay suitable for international tourists?",
     a: "Absolutely! We have a dedicated Foreign Traveler Elite Package with an English-speaking guide, airport concierge, SIM card, currency assistance, and 24/7 emergency support. Many of our guests are from the UK, UAE, USA, Germany and Japan.",
   },
   {
@@ -115,7 +115,7 @@ export default function FaqSection() {
           </h2>
           <div className="divider-gold" />
           <p className="section-subtitle max-w-xl mx-auto mt-6">
-            Everything you need to know about Ahlan Homestays, our packages and visiting Andaman.
+            Everything you need to know about Ahlan Homestay, our packages and visiting Andaman.
           </p>
         </motion.div>
 
@@ -136,7 +136,7 @@ export default function FaqSection() {
             Our team is available 24/7 on WhatsApp to help you plan your perfect Andaman trip.
           </p>
           <a
-            href="https://wa.me/919434281386?text=Hi! I have a question about Ahlan Homestays."
+            href="https://wa.me/919434281386?text=Hi! I have a question about Ahlan Homestay."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"

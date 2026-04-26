@@ -31,7 +31,7 @@ export default function BlogPage() {
 
           <h2 className="text-2xl font-semibold mt-12 mb-4">Why Stay at Ahlan During Your Visit?</h2>
           <p className="text-gray-600 leading-relaxed">
-            Located just 10 minutes from the airport, Ahlan Homestay offers the perfect base for your Andaman discovery. Our Gold-category rooms provide hotel-grade luxury with the warmth of a local home.
+            Located just 10 minutes from the airport, Ahlan Homestays offers the perfect base for your Andaman discovery. Our Gold-category rooms provide hotel-grade luxury with the warmth of a local home.
           </p>
 
           <div className="mt-12 p-8 bg-black text-white rounded-2xl text-center">

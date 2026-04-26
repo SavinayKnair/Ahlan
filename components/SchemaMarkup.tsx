@@ -1,8 +1,8 @@
 import Script from "next/script";
 
 export default function SchemaMarkup() {
-  const siteName = "Ahlanandaman.in";
-  const orgName = "Ahlan Homestay";
+  const siteName = "ahlanandaman.in";
+  const orgName = "Ahlan Homestays";
   const baseUrl = "https://ahlanandaman.in";
 
   const webSiteSchema = {
@@ -18,7 +18,7 @@ export default function SchemaMarkup() {
     "@type": ["LodgingBusiness", "BedAndBreakfast"],
     name: orgName,
     description:
-      "Premium Gold Category Homestay in Port Blair, Andaman & Nicobar Islands. Spacious 300+ sq ft deluxe AC rooms, curated island packages, airport transfers and world-class hospitality.",
+      "Ahlan Homestays | Premium Gold Category Homestay in Port Blair. Spacious 300+ sq ft deluxe AC rooms, curated island packages, airport transfers and world-class hospitality.",
     url: baseUrl,
     telephone: "+91-9434281386",
     email: "ahlanhomestays@gmail.com",
@@ -76,7 +76,7 @@ export default function SchemaMarkup() {
         name: `What is ${siteName}?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `${siteName} is a Premium Gold Category Homestay in Port Blair, Andaman & Nicobar Islands. We offer spacious 300+ sq ft deluxe AC rooms with hotel-grade comfort and homely warmth.`,
+          text: `${siteName} (Ahlan Homestays) is a Premium Gold Category Homestay in Port Blair, Andaman & Nicobar Islands. We offer spacious 300+ sq ft deluxe AC rooms with hotel-grade comfort and homely warmth.`,
         },
       },
       {

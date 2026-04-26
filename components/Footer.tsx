@@ -59,7 +59,7 @@ export default function Footer() {
               <div className="relative w-14 h-14 rounded-full overflow-hidden shadow-gold-glow flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
                 <Image
                   src="/favicon.png"
-                  alt="Ahlan Homestays Logo"
+                  alt="Ahlan Homestay Logo"
                   fill
                   className="object-cover"
                   sizes="56px"
@@ -206,7 +206,7 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/50 text-xs font-sans text-center md:text-left">
-              © {new Date().getFullYear()} Ahlan Homestays. All rights reserved. | Port Blair, Andaman & Nicobar Islands, India
+              © {new Date().getFullYear()} Ahlan Homestay. All rights reserved. | Port Blair, Andaman & Nicobar Islands, India
             </p>
             <div className="flex items-center gap-6">
               <Link href="/privacy" className="text-white/50 hover:text-champagne text-xs font-sans transition-colors">
@@ -222,7 +222,7 @@ export default function Footer() {
           </div>
           {/* SEO Text */}
           <p className="text-white/30 text-xs font-sans text-center mt-4 max-w-3xl mx-auto tracking-widest uppercase">
-            Ahlan Homestays — Where Hospitality Meets Paradise
+            Ahlan Homestay — Where Hospitality Meets Paradise
           </p>
         </div>
       </div>
