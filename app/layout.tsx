@@ -16,18 +16,18 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ahlanandaman.in'),
-  title: "Ahlanandaman.in | Premium Gold Category Homestay in Port Blair",
+  title: "Ahlan Homestay | Premium Gold Category Homestay in Port Blair",
   description:
     "Experience premium luxury homestay in Port Blair, Andaman. Spacious 300+ sq ft AC rooms, hotel-grade comfort, island packages, airport transfers & personalized hospitality. Book now & get 10% off!",
   applicationName: 'Ahlanandaman.in',
   manifest: '/manifest.json',
   icons: {
     icon: [
-      { url: '/favicon.png?v=6', type: 'image/png', sizes: '32x32' },
-      { url: '/favicon.svg?v=6', type: 'image/svg+xml' },
-      { url: '/favicon.ico?v=6' },
+      { url: '/favicon.png?v=7', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon.svg?v=7', type: 'image/svg+xml' },
+      { url: '/favicon.ico?v=7' },
     ],
-    apple: '/apple-touch-icon.png?v=6',
+    apple: '/apple-touch-icon.png?v=7',
   },
   keywords: [
     "Andaman homestay",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "premium rooms Port Blair",
     "Andaman island stay",
     "Ahlanandaman.in",
-    "Ahlan Homestays",
+    "Ahlan Homestay",
     "Gold category homestay Andaman",
   ].join(", "),
   authors: [{ name: "Ahlanandaman.in" }],
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://ahlanandaman.in",
     siteName: "Ahlanandaman.in",
-    title: "Ahlanandaman.in | Luxury Homestay in Andaman & Nicobar Islands",
+    title: "Ahlan Homestay | Premium Gold Category Homestay in Port Blair",
     description:
       "Premium Gold Category Homestay in Port Blair. Spacious 300+ sq ft deluxe rooms, curated island packages & world-class hospitality. Where Hospitality Meets Paradise.",
     images: [
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ahlanandaman.in | Best Luxury Homestay in Andaman",
+    title: "Ahlan Homestay | Premium Gold Category Homestay in Port Blair",
     description: "Premium Gold Category Homestay in Port Blair, Andaman. Hotel comfort with homely warmth.",
     images: ["/og-image.jpg"],
   },
@@ -103,7 +103,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/favicon.png?v=6" type="image/png" />
+        <link rel="icon" href="/favicon.png?v=7" type="image/png" />
         <meta name="geo.region" content="IN-AN" />
         <meta name="geo.placename" content="Port Blair, Andaman and Nicobar Islands" />
         <meta name="geo.position" content="11.6234;92.7265" />
@@ -118,7 +118,6 @@ export default function RootLayout({
             id="google-translate-script"
             src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
             strategy="afterInteractive"
-            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
           />
           <Script id="google-translate-init" strategy="afterInteractive">
             {`
