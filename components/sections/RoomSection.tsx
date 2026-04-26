@@ -19,7 +19,7 @@ const rooms = [
     features: ["King-Size Bed", "AC", "Smart TV", "Premium Bath", "Free WiFi", "Daily Cleaning"],
     tag: "Forest Views",
     tagColor: "bg-palm",
-    availability: "Available",
+    availability: "Only 1 Available",
   },
   {
     id: "deluxe-premium",
@@ -32,7 +32,7 @@ const rooms = [
     features: ["King-Size Bed", "AC", "Smart TV", "Premium Bath", "Free WiFi", "Daily Cleaning"],
     tag: "Most Popular",
     tagColor: "bg-champagne",
-    availability: "Available",
+    availability: "Only 1 Available",
   },
   {
     id: "deluxe-family",
@@ -45,7 +45,7 @@ const rooms = [
     features: ["Multiple Beds", "AC", "Smart TV", "Premium Bath", "Free WiFi", "Daily Cleaning"],
     tag: "Family Favourite",
     tagColor: "bg-ocean-light",
-    availability: "Available",
+    availability: "Only 1 Available",
   },
   {
     id: "deluxe-couple",
@@ -58,7 +58,7 @@ const rooms = [
     features: ["King-Size Bed", "AC", "Smart TV", "Premium Bath", "Free WiFi", "Rose Décor Option"],
     tag: "Romantic",
     tagColor: "bg-rose-500",
-    availability: "Available",
+    availability: "Only 1 Available",
   },
   {
     id: "deluxe-runway",
@@ -71,7 +71,7 @@ const rooms = [
     features: ["King-Size Bed", "AC", "Soundproof Windows", "Smart TV", "Free WiFi", "Premium Bath"],
     tag: "Unique View",
     tagColor: "bg-blue-600",
-    availability: "Available",
+    availability: "Only 1 Available",
   },
 ];
 
