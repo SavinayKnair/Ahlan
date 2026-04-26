@@ -15,8 +15,8 @@ import CurrencyConverter from "@/components/CurrencyConverter";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ahlanandaman.in"),
-  title: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
+  metadataBase: new URL('https://ahlanandaman.in'),
+  title: "Ahlanandaman.in | Premium Gold Category Homestay in Port Blair",
   description:
     "Experience premium luxury homestay in Port Blair, Andaman. Spacious 300+ sq ft AC rooms, hotel-grade comfort, island packages, airport transfers & personalized hospitality. Book now & get 10% off!",
   manifest: '/manifest.json',
