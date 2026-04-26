@@ -3,10 +3,10 @@ import Link from "next/link";
 import { BedDouble, Check, Maximize } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Deluxe Rooms in Port Blair | 300+ sq ft Premium AC Rooms | Ahlan Homestays",
-  description: "Book deluxe rooms in Port Blair at Ahlan Homestays. Spacious 300+ sq ft AC rooms with Smart TV, premium bathrooms, high-speed WiFi & daily housekeeping. Gold Category Certified. From ₹2,999/night.",
+  title: "Ahlan Homestay | Deluxe Rooms in Port Blair | 300+ sq ft Premium AC Rooms",
+  description: "Book deluxe rooms in Port Blair at Ahlan Homestay. Spacious 300+ sq ft AC rooms with Smart TV, premium bathrooms, high-speed WiFi & daily housekeeping. Gold Category Certified. From ₹2,999/night.",
   keywords: "deluxe rooms Port Blair, premium rooms Port Blair, AC rooms Port Blair, luxury rooms Andaman, 300 sqft room Port Blair",
-  alternates: { canonical: "https://ahlanhomestays.com/deluxe-rooms-port-blair" },
+  alternates: { canonical: "https://ahlanandaman.in/deluxe-rooms-port-blair" },
 };
 
 export default function DeluxeRoomsPortBlair() {
@@ -18,7 +18,7 @@ export default function DeluxeRoomsPortBlair() {
         <p className="font-sans text-white/80 text-xl max-w-2xl mx-auto mb-8">
           Spacious 300+ sq ft deluxe AC rooms. Smart TV, premium washrooms, high-speed WiFi. Hotel comfort, homestay price.
         </p>
-        <a href="https://wa.me/919434281386?text=Hi! I'd like to book a deluxe room at Ahlan Homestays in Port Blair." target="_blank" rel="noopener noreferrer" className="btn-primary text-base py-4 px-10 inline-block">
+        <a href="https://wa.me/919434281386?text=Hi! I'd like to book a deluxe room at Ahlan Homestay in Port Blair." target="_blank" rel="noopener noreferrer" className="btn-primary text-base py-4 px-10 inline-block">
           💬 Check Room Availability
         </a>
       </div>
@@ -52,7 +52,7 @@ export default function DeluxeRoomsPortBlair() {
               <h3 className="font-serif font-bold text-lg text-midnight dark:text-white mb-1">{r.name}</h3>
               <div className="flex items-center justify-center gap-1 text-sm text-warmgray dark:text-gray-400 font-sans mb-3"><Maximize className="w-3.5 h-3.5" />{r.size}</div>
               <div className="font-serif text-xl font-bold text-champagne mb-4">{r.price}</div>
-              <a href={`https://wa.me/919434281386?text=Hi! I want to book the ${r.name} at Ahlan Homestays.`} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs py-2.5 px-5 w-full block text-center">Book Now</a>
+              <a href={`https://wa.me/919434281386?text=Hi! I want to book the ${r.name} at Ahlan Homestay.`} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs py-2.5 px-5 w-full block text-center">Book Now</a>
             </div>
           ))}
         </div>

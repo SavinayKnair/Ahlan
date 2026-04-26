@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   icons: {
     icon: [
-      { url: '/favicon.png?v=9', type: 'image/png', sizes: '32x32' },
-      { url: '/favicon.svg?v=9', type: 'image/svg+xml' },
-      { url: '/favicon.ico?v=9' },
+      { url: '/favicon.png?v=10', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon.svg?v=10', type: 'image/svg+xml' },
+      { url: '/favicon.ico?v=10' },
     ],
-    apple: '/apple-touch-icon.png?v=9',
+    apple: '/apple-touch-icon.png?v=10',
   },
   keywords: [
     "Andaman homestay",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     "Ahlan Homestay",
     "Gold category homestay Andaman",
   ].join(", "),
-  authors: [{ name: "Ahlan Homestay" }],
-  creator: "Ahlan Homestay",
-  publisher: "Ahlan Homestay",
+  authors: [{ name: "Ahlanandaman.in" }],
+  creator: "Ahlanandaman.in",
+  publisher: "Ahlanandaman.in",
   robots: {
     index: true,
     follow: true,
@@ -103,7 +103,12 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/favicon.png?v=9" type="image/png" />
+        <link rel="icon" href="/favicon.png?v=10" type="image/png" />
+        {/* Aggressive Site Name Signals for Google */}
+        <meta name="apple-mobile-web-app-title" content="Ahlanandaman.in" />
+        <meta name="application-name" content="Ahlanandaman.in" />
+        <meta property="og:site_name" content="Ahlanandaman.in" />
+        
         <meta name="geo.region" content="IN-AN" />
         <meta name="geo.placename" content="Port Blair, Andaman and Nicobar Islands" />
         <meta name="geo.position" content="11.6234;92.7265" />

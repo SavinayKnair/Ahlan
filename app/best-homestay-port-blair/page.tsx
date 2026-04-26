@@ -3,10 +3,10 @@ import Link from "next/link";
 import { Check, Star, MapPin, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Best Homestay in Port Blair 2026 | Ahlan Homestays – Gold Category",
-  description: "Looking for the best homestay in Port Blair, Andaman? Ahlan Homestays is a Gold Category certified premium homestay with 300+ sq ft AC rooms, 4.9★ Google rating, and all-inclusive island packages. Book now!",
+  title: "Ahlan Homestay | Best Homestay in Port Blair 2026 | Gold Category",
+  description: "Looking for the best homestay in Port Blair, Andaman? Ahlan Homestay is a Gold Category certified premium homestay with 300+ sq ft AC rooms, 4.9★ Google rating, and all-inclusive island packages. Book now!",
   keywords: "best homestay in Port Blair, top homestay Port Blair, Port Blair homestay 2026, premium homestay Andaman, gold category homestay Port Blair",
-  alternates: { canonical: "https://ahlanhomestays.com/best-homestay-port-blair" },
+  alternates: { canonical: "https://ahlanandaman.in/best-homestay-port-blair" },
 };
 
 export default function BestHomestayPortBlair() {
@@ -16,15 +16,15 @@ export default function BestHomestayPortBlair() {
         <div className="badge-gold mx-auto mb-6 w-fit"><Star className="w-3.5 h-3.5 fill-champagne" /> #1 Rated</div>
         <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">Best Homestay in <span className="text-champagne">Port Blair</span></h1>
         <p className="font-sans text-white/80 text-xl max-w-2xl mx-auto mb-8">
-          Ahlan Homestays — Port Blair&apos;s only Gold Category Certified Premium Homestay. Hotel comfort, homely warmth, 4.9★ Google rating.
+          Ahlan Homestay — Port Blair&apos;s only Gold Category Certified Premium Homestay. Hotel comfort, homely warmth, 4.9★ Google rating.
         </p>
-        <a href="https://wa.me/919434281386?text=Hi! I want to book the best homestay in Port Blair — Ahlan Homestays!" target="_blank" rel="noopener noreferrer" className="btn-primary text-base py-4 px-10 inline-block">
+        <a href="https://wa.me/919434281386?text=Hi! I want to book the best homestay in Port Blair — Ahlan Homestay!" target="_blank" rel="noopener noreferrer" className="btn-primary text-base py-4 px-10 inline-block">
           📞 Book Now – +91 94342 81386
         </a>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <h2 className="font-serif text-4xl font-bold text-midnight dark:text-white mb-8">Why Ahlan Homestays is the Best in Port Blair</h2>
+        <h2 className="font-serif text-4xl font-bold text-midnight dark:text-white mb-8">Why Ahlan Homestay is the Best in Port Blair</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {[
             "Gold Category Certified by A&N Administration",
@@ -55,9 +55,9 @@ export default function BestHomestayPortBlair() {
         </div>
 
         <div className="prose max-w-none">
-          <h2 className="font-serif text-3xl font-bold text-midnight dark:text-white mb-4">About Ahlan Homestays — Port Blair</h2>
+          <h2 className="font-serif text-3xl font-bold text-midnight dark:text-white mb-4">About Ahlan Homestay — Port Blair</h2>
           <p className="text-warmgray dark:text-gray-300 font-sans leading-relaxed mb-4">
-            Ahlan Homestays is widely regarded as the best homestay in Port Blair for good reason. As a <strong>Gold Category Certified</strong> premium homestay, we are held to the highest standards set by the Andaman & Nicobar Islands Administration.
+            Ahlan Homestay is widely regarded as the best homestay in Port Blair for good reason. As a <strong>Gold Category Certified</strong> premium homestay, we are held to the highest standards set by the Andaman & Nicobar Islands Administration.
           </p>
           <p className="text-warmgray dark:text-gray-300 font-sans leading-relaxed mb-4">
             Our <strong>spacious 300+ sq ft deluxe AC rooms</strong> feature premium furnishings, Smart TV, high-speed WiFi, and luxury washrooms. Unlike typical Port Blair homestays, every detail at Ahlan is crafted to provide a 5-star experience at a reasonable price.

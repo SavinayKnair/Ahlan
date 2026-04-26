@@ -3,10 +3,10 @@ import Link from "next/link";
 import { Heart, Star, Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Andaman Honeymoon Stay 2026 | Romantic Packages | Ahlan Homestays Port Blair",
-  description: "Plan your dream honeymoon in Andaman with Ahlan Homestays. Romantic room décor, candlelight dinner, beach photoshoot, couples spa, ferry & all sightseeing. Packages from ₹29,999/couple.",
+  title: "Ahlan Homestay | Andaman Honeymoon Stay 2026 | Romantic Packages Port Blair",
+  description: "Plan your dream honeymoon in Andaman with Ahlan Homestay. Romantic room décor, candlelight dinner, beach photoshoot, couples spa, ferry & all sightseeing. Packages from ₹29,999/couple.",
   keywords: "Andaman honeymoon stay, honeymoon homestay Andaman, romantic package Port Blair, couples stay Andaman, Andaman honeymoon 2026",
-  alternates: { canonical: "https://ahlanhomestays.com/andaman-honeymoon-stay" },
+  alternates: { canonical: "https://ahlanandaman.in/andaman-honeymoon-stay" },
 };
 
 export default function AndamanHoneymoonStay() {
@@ -16,7 +16,7 @@ export default function AndamanHoneymoonStay() {
         <div className="text-5xl mb-4">💑</div>
         <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">Andaman <span className="text-champagne">Honeymoon Stay</span></h1>
         <p className="font-sans text-white/80 text-xl max-w-2xl mx-auto mb-8">
-          Begin forever in paradise. Romantic beach dinners, couple photoshoots, and curated island experiences at Ahlan Homestays.
+          Begin forever in paradise. Romantic beach dinners, couple photoshoots, and curated island experiences at Ahlan Homestay.
         </p>
         <a href="https://wa.me/919434281386?text=Hi! We're planning our honeymoon in Andaman. Please share the Honeymoon Bliss Package details!" target="_blank" rel="noopener noreferrer" className="btn-primary text-base py-4 px-10 inline-block">
           💬 Plan Our Honeymoon
@@ -35,7 +35,7 @@ export default function AndamanHoneymoonStay() {
         <div className="p-8 rounded-3xl text-white text-center mb-8" style={{ background: "linear-gradient(135deg, #4a0f2e, #8b1a4a)" }}>
           <div className="font-serif text-4xl font-bold text-champagne mb-2">₹29,999 / couple</div>
           <p className="text-white/80 font-sans text-sm mb-6">4 Nights / 5 Days | Includes ferry, stay, meals, photoshoot & all experiences</p>
-          <a href="https://wa.me/919434281386?text=Hi! We'd like to book the Honeymoon Bliss Package at Ahlan Homestays! 💑" target="_blank" rel="noopener noreferrer" className="btn-primary">Book Honeymoon Package</a>
+          <a href="https://wa.me/919434281386?text=Hi! We'd like to book the Honeymoon Bliss Package at Ahlan Homestay! 💑" target="_blank" rel="noopener noreferrer" className="btn-primary">Book Honeymoon Package</a>
         </div>
         <div className="flex flex-wrap gap-4 justify-center">
           <Link href="/packages" className="btn-secondary">All Packages</Link>
