@@ -19,15 +19,15 @@ export const metadata: Metadata = {
   title: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
   description:
     "Ahlan Homestays | Premium Gold Category Homestay in Port Blair. Experience premium luxury homestay in Port Blair, Andaman. Spacious 300+ sq ft AC rooms, hotel-grade comfort, island packages & personalized hospitality.",
-  applicationName: 'ahlanandaman.in',
+  applicationName: 'Ahlan Homestay',
   manifest: '/manifest.json',
   icons: {
     icon: [
-      { url: '/favicon.png?v=11', type: 'image/png', sizes: '32x32' },
-      { url: '/favicon.svg?v=11', type: 'image/svg+xml' },
-      { url: '/favicon.ico?v=11' },
+      { url: '/favicon.png?v=12', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon.svg?v=12', type: 'image/svg+xml' },
+      { url: '/favicon.ico?v=12' },
     ],
-    apple: '/apple-touch-icon.png?v=11',
+    apple: '/apple-touch-icon.png?v=12',
   },
   keywords: [
     "Andaman homestay",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     "Ahlan Homestays",
     "Gold category homestay Andaman",
   ].join(", "),
-  authors: [{ name: "Ahlan Homestays" }],
-  creator: "ahlanandaman.in",
-  publisher: "ahlanandaman.in",
+  authors: [{ name: "Ahlan Homestay" }],
+  creator: "Ahlan Homestay",
+  publisher: "Ahlan Homestay",
   robots: {
     index: true,
     follow: true,
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://ahlanandaman.in",
-    siteName: "ahlanandaman.in",
+    siteName: "Ahlan Homestay",
     title: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
     description:
       "Ahlan Homestays | Premium Gold Category Homestay in Port Blair. Spacious 300+ sq ft deluxe rooms, curated island packages & world-class hospitality.",
@@ -103,11 +103,11 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/favicon.png?v=11" type="image/png" />
-        {/* Reverted Site Name Signals to lowercase */}
-        <meta name="apple-mobile-web-app-title" content="ahlanandaman.in" />
-        <meta name="application-name" content="ahlanandaman.in" />
-        <meta property="og:site_name" content="ahlanandaman.in" />
+        <link rel="icon" href="/favicon.png?v=12" type="image/png" />
+        {/* Exact Branding Signals for Google Site Name display */}
+        <meta name="apple-mobile-web-app-title" content="Ahlan Homestay" />
+        <meta name="application-name" content="Ahlan Homestay" />
+        <meta property="og:site_name" content="Ahlan Homestay" />
         
         <meta name="geo.region" content="IN-AN" />
         <meta name="geo.placename" content="Port Blair, Andaman and Nicobar Islands" />
