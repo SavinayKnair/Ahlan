@@ -23,11 +23,13 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   icons: {
     icon: [
-      { url: '/favicon.png?v=15', type: 'image/png', sizes: '32x32' },
-      { url: '/favicon.svg?v=15', type: 'image/svg+xml' },
-      { url: '/favicon.ico?v=15' },
+      { url: '/favicon.ico?v=20' },
+      { url: '/favicon.png?v=20', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon.svg?v=20', type: 'image/svg+xml' },
     ],
-    apple: '/apple-touch-icon.png?v=15',
+    apple: [
+      { url: '/apple-touch-icon.png?v=20', sizes: '180x180', type: 'image/png' },
+    ],
   },
   keywords: [
     "Andaman homestay",
@@ -103,7 +105,8 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/favicon.png?v=15" type="image/png" />
+        
+        {/* Removed redundant link tags — Next.js metadata handles icons now */}
         
         {/* Exact Site Name Branding Signals */}
         <meta property="og:site_name" content="Ahlan Homestays" />
