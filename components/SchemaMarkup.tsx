@@ -1,9 +1,8 @@
 import Script from "next/script";
 
 export default function SchemaMarkup() {
-  const siteName = "Ahlan Homestay";
+  const siteName = "Ahlan Homestays";
   const alternateName = "Ahlanandaman.in";
-  const orgName = "Ahlan Homestays";
   const baseUrl = "https://ahlanandaman.in";
 
   const webSiteSchema = {
@@ -17,7 +16,7 @@ export default function SchemaMarkup() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": ["LodgingBusiness", "BedAndBreakfast"],
-    name: orgName,
+    name: siteName,
     description:
       "Ahlan Homestays | Premium Gold Category Homestay in Port Blair. Spacious 300+ sq ft deluxe AC rooms, curated island packages, airport transfers and world-class hospitality.",
     url: baseUrl,
@@ -74,15 +73,15 @@ export default function SchemaMarkup() {
     mainEntity: [
       {
         "@type": "Question",
-        name: `What is Ahlan Homestays?`,
+        name: `What is ${siteName}?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Ahlan Homestays is a Premium Gold Category Homestay in Port Blair, Andaman & Nicobar Islands. We offer spacious 300+ sq ft deluxe AC rooms with hotel-grade comfort and homely warmth.`,
+          text: `${siteName} is a Premium Gold Category Homestay in Port Blair, Andaman & Nicobar Islands. We offer spacious 300+ sq ft deluxe AC rooms with hotel-grade comfort and homely warmth.`,
         },
       },
       {
         "@type": "Question",
-        name: `Where is Ahlan Homestays located?`,
+        name: `Where is ${siteName} located?`,
         acceptedAnswer: {
           "@type": "Answer",
           text: "We are located in Port Blair, Andaman & Nicobar Islands, close to Cellular Jail, Corbyn's Cove Beach, and Veer Savarkar International Airport.",
@@ -90,7 +89,7 @@ export default function SchemaMarkup() {
       },
       {
         "@type": "Question",
-        name: `What amenities does Ahlan Homestays offer?`,
+        name: `What amenities does ${siteName} offer?`,
         acceptedAnswer: {
           "@type": "Answer",
           text: "We offer AC rooms with premium washrooms, high-speed WiFi, Smart TV, daily housekeeping, airport pickup/drop, breakfast, local travel guidance, and curated island sightseeing packages.",

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
   description:
     "Ahlan Homestays | Premium Gold Category Homestay in Port Blair. Experience premium luxury homestay in Port Blair, Andaman. Spacious 300+ sq ft AC rooms, hotel-grade comfort, island packages & personalized hospitality.",
-  applicationName: 'Ahlan Homestay',
+  applicationName: 'Ahlan Homestays',
   manifest: '/manifest.json',
   icons: {
     icon: [
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     "Ahlan Homestays",
     "Gold category homestay Andaman",
   ].join(", "),
-  authors: [{ name: "Ahlan Homestay" }],
-  creator: "Ahlan Homestay",
-  publisher: "Ahlan Homestay",
+  authors: [{ name: "Ahlan Homestays" }],
+  creator: "Ahlan Homestays",
+  publisher: "Ahlan Homestays",
   robots: {
     index: true,
     follow: true,
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://ahlanandaman.in",
-    siteName: "Ahlan Homestay",
+    siteName: "Ahlan Homestays",
     title: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
     description:
       "Ahlan Homestays | Premium Gold Category Homestay in Port Blair. Spacious 300+ sq ft deluxe rooms, curated island packages & world-class hospitality.",
@@ -104,10 +104,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.png?v=12" type="image/png" />
-        {/* Exact Branding Signals for Google Site Name display */}
-        <meta name="apple-mobile-web-app-title" content="Ahlan Homestay" />
-        <meta name="application-name" content="Ahlan Homestay" />
-        <meta property="og:site_name" content="Ahlan Homestay" />
+        
+        {/* Exact Site Name Branding Signals */}
+        <meta property="og:site_name" content="Ahlan Homestays" />
+        <meta name="application-name" content="Ahlan Homestays" />
+        <meta name="apple-mobile-web-app-title" content="Ahlan Homestays" />
         
         <meta name="geo.region" content="IN-AN" />
         <meta name="geo.placename" content="Port Blair, Andaman and Nicobar Islands" />
