@@ -65,7 +65,7 @@ export default function AboutSection() {
                 <div className="w-20 h-20 rounded-full bg-champagne/20 border-2 border-champagne flex items-center justify-center mb-6 backdrop-blur-sm">
                   <span className="font-serif text-4xl font-bold text-champagne">A</span>
                 </div>
-                <h2 className="font-serif text-3xl font-bold mb-3 drop-shadow-lg">Ahlan Homestay</h2>
+                <h2 className="font-serif text-3xl font-bold mb-3 drop-shadow-lg">Ahlan Homestays</h2>
                 <p className="font-serif italic text-champagne text-lg mb-6 drop-shadow-md">Where Hospitality Meets Paradise</p>
                 <div className="grid grid-cols-2 gap-4 w-full max-w-xs relative">
                   <div className="bg-midnight/40 backdrop-blur-md rounded-2xl p-4 text-center border border-white/10 group-hover:border-champagne/30 transition-colors">
@@ -111,7 +111,7 @@ export default function AboutSection() {
           >
             <div className="badge-gold mb-6">
               <Sparkles className="w-3.5 h-3.5" />
-              About Ahlan Homestay
+              About Ahlan Homestays
             </div>
 
             <h2 className="section-title text-midnight dark:text-white mb-6">
@@ -122,7 +122,7 @@ export default function AboutSection() {
             <div className="divider-gold ml-0" />
 
             <p className="section-subtitle mb-6">
-              Ahlan Homestay is a <strong>Gold Category Premium Homestay</strong> in Port Blair, 
+              Ahlan Homestays is a <strong>Gold Category Premium Homestay</strong> in Port Blair, 
               Andaman & Nicobar Islands. We redefine the homestay experience by combining 
               <strong> hotel-grade comfort</strong> with the warmth of a home.
             </p>

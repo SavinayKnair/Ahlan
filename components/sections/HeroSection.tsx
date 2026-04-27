@@ -33,13 +33,13 @@ export default function HeroSection() {
     <section
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      aria-label="Ahlan Homestay – Luxury Homestay in Andaman"
+      aria-label="Ahlan Homestays – Luxury Homestay in Andaman"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-bg.png"
-          alt="Andaman Beach Sunrise - Ahlan Homestay"
+          alt="Andaman Beach Sunrise - Ahlan Homestays"
           fill
           priority
           sizes="100vw"

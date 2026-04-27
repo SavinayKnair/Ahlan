@@ -16,7 +16,7 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ahlanandaman.in'),
-  title: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
+  title: "Ahlan Homestays - Premium Gold Category Homestay in Port Blair",
   description:
     "Ahlan Homestays | Premium Gold Category Homestay in Port Blair. Experience premium luxury homestay in Port Blair, Andaman. Spacious 300+ sq ft AC rooms, hotel-grade comfort, island packages & personalized hospitality.",
   applicationName: 'Ahlan Homestays',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://ahlanandaman.in",
     siteName: "Ahlan Homestays",
-    title: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
+    title: "Ahlan Homestays - Premium Gold Category Homestay in Port Blair",
     description:
       "Ahlan Homestays | Premium Gold Category Homestay in Port Blair. Spacious 300+ sq ft deluxe rooms, curated island packages & world-class hospitality.",
     images: [
@@ -73,13 +73,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ahlanandaman.in - Luxury Homestay Andaman",
+        alt: "Ahlan Homestays - Luxury Homestay Andaman",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
+    title: "Ahlan Homestays - Premium Gold Category Homestay in Port Blair",
     description: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair. Hotel comfort with homely warmth.",
     images: ["/og-image.jpg"],
   },

@@ -29,15 +29,15 @@ const posts = [
       },
       {
         heading: "Ferry & Transport Tips",
-        body: "Always book inter-island ferry tickets at least 2–3 days in advance during peak season (Dec–Feb). Private ferries like Makruzz and Nautika are significantly faster and more comfortable than government vessels. Reach the ferry terminal at least 45 minutes before departure — boarding stops early. Ahlan Homestay arranges all ferry tickets for guests as part of our concierge service."
+        body: "Always book inter-island ferry tickets at least 2–3 days in advance during peak season (Dec–Feb). Private ferries like Makruzz and Nautika are significantly faster and more comfortable than government vessels. Reach the ferry terminal at least 45 minutes before departure — boarding stops early. Ahlan Homestays arranges all ferry tickets for guests as part of our concierge service."
       },
       {
         heading: "Food & Local Dining Tips",
-        body: "Andaman seafood is world-class. Don't miss the fresh lobster at Lighthouse Residency or the local fish curry at Annapurna Cafeteria. Every meal at the local dhaba-style restaurants is an authentic experience. For vegetarians, options are available at most restaurants near Aberdeen Bazaar. Our team at Ahlan Homestay can guide you to the best hidden dining spots locals love."
+        body: "Andaman seafood is world-class. Don't miss the fresh lobster at Lighthouse Residency or the local fish curry at Annapurna Cafeteria. Every meal at the local dhaba-style restaurants is an authentic experience. For vegetarians, options are available at most restaurants near Aberdeen Bazaar. Our team at Ahlan Homestays can guide you to the best hidden dining spots locals love."
       },
       {
-        heading: "Why Stay at Ahlan Homestay",
-        body: "Timing your trip perfectly is only half the equation. Where you stay defines the experience. Ahlan Homestay is Port Blair's premier Gold Category homestay, ideally located just 7 km from the airport and minutes from the ferry terminal. Our expert team provides personalised travel itineraries, instant ferry booking assistance, and private airport transfers — so your island adventure begins the moment you land.\n\nDon't let the peak season rush ruin your plans. Book your room at Ahlan Homestay early and let us handle everything!"
+        heading: "Why Stay at Ahlan Homestays",
+        body: "Timing your trip perfectly is only half the equation. Where you stay defines the experience. Ahlan Homestays is Port Blair's premier Gold Category homestay, ideally located just 7 km from the airport and minutes from the ferry terminal. Our expert team provides personalised travel itineraries, instant ferry booking assistance, and private airport transfers — so your island adventure begins the moment you land.\n\nDon't let the peak season rush ruin your plans. Book your room at Ahlan Homestays early and let us handle everything!"
       }
     ]
   },
@@ -64,15 +64,15 @@ const posts = [
       },
       {
         heading: "Romantic Experiences You Must Try",
-        body: "Private sunset cruise around North Bay Island. Underwater sea walking — holding hands 5 metres below the ocean. Bioluminescent kayaking at night through Havelock's mangroves. Couple's scuba dive with certified instructors. Private beachside dinner arranged by Ahlan Homestay — our most requested experience."
+        body: "Private sunset cruise around North Bay Island. Underwater sea walking — holding hands 5 metres below the ocean. Bioluminescent kayaking at night through Havelock's mangroves. Couple's scuba dive with certified instructors. Private beachside dinner arranged by Ahlan Homestays — our most requested experience."
       },
       {
         heading: "Ferry & Island Hopping Tips",
-        body: "Plan 2 nights in Port Blair, 2 nights in Havelock, and 1 night in Neil Island for the perfect honeymoon route. Book ferry tickets well in advance during peak season. Private speed boat charters are available for a more intimate island-hopping experience. Ahlan Homestay coordinates all inter-island logistics for honeymooning couples."
+        body: "Plan 2 nights in Port Blair, 2 nights in Havelock, and 1 night in Neil Island for the perfect honeymoon route. Book ferry tickets well in advance during peak season. Private speed boat charters are available for a more intimate island-hopping experience. Ahlan Homestays coordinates all inter-island logistics for honeymooning couples."
       },
       {
-        heading: "Why Choose Ahlan Homestay",
-        body: "A perfect honeymoon requires a perfect stay. Ahlan Homestay specialises in curating deeply romantic experiences. From flower-decorated luxury rooms upon arrival to arranging private sunset cruises and exclusive beachside dinners, our team handles every detail. Skip the crowded generic resorts. Ahlan Homestay offers the privacy, premium amenities, and personalised touch that your honeymoon truly deserves."
+        heading: "Why Choose Ahlan Homestays",
+        body: "A perfect honeymoon requires a perfect stay. Ahlan Homestays specialises in curating deeply romantic experiences. From flower-decorated luxury rooms upon arrival to arranging private sunset cruises and exclusive beachside dinners, our team handles every detail. Skip the crowded generic resorts. Ahlan Homestays offers the privacy, premium amenities, and personalised touch that your honeymoon truly deserves."
       }
     ]
   },
@@ -99,15 +99,15 @@ const posts = [
       },
       {
         heading: "Food Tips for Families",
-        body: "Andaman has excellent food options for families. Most restaurants cater to mixed dietary needs. Pure vegetarian options are widely available at Annapurna Cafeteria and New Lighthouse Restaurant. Seafood lovers should try the fresh catch at local restaurants near Aberdeen Bazaar. Street food at the night market is fun for teenagers. Ahlan Homestay can arrange home-style meals on request."
+        body: "Andaman has excellent food options for families. Most restaurants cater to mixed dietary needs. Pure vegetarian options are widely available at Annapurna Cafeteria and New Lighthouse Restaurant. Seafood lovers should try the fresh catch at local restaurants near Aberdeen Bazaar. Street food at the night market is fun for teenagers. Ahlan Homestays can arrange home-style meals on request."
       },
       {
         heading: "Ferry Tips for Families with Children",
-        body: "Always book enclosed, air-conditioned cabins on private ferries (Makruzz or Nautika) for young children. Open deck travel in choppy seas is inadvisable with toddlers. Carry motion sickness medication. Pack snacks and entertainment for the 1.5–2.5 hour ferry rides. Ahlan Homestay books all ferry tickets and ensures family-friendly cabin allocation."
+        body: "Always book enclosed, air-conditioned cabins on private ferries (Makruzz or Nautika) for young children. Open deck travel in choppy seas is inadvisable with toddlers. Carry motion sickness medication. Pack snacks and entertainment for the 1.5–2.5 hour ferry rides. Ahlan Homestays books all ferry tickets and ensures family-friendly cabin allocation."
       },
       {
-        heading: "Why Families Choose Ahlan Homestay",
-        body: "Safety, comfort, and space are every family's top priorities. Our spacious Deluxe Rooms and interconnecting family suites provide the room you need. At Ahlan Homestay, our dedicated travel desk arranges private, sanitised vehicles, curates family-friendly day itineraries, and ensures children are never bored. We also keep children's amenities available on request. Families with children consistently rate us as Port Blair's most family-friendly homestay."
+        heading: "Why Families Choose Ahlan Homestays",
+        body: "Safety, comfort, and space are every family's top priorities. Our spacious Deluxe Rooms and interconnecting family suites provide the room you need. At Ahlan Homestays, our dedicated travel desk arranges private, sanitised vehicles, curates family-friendly day itineraries, and ensures children are never bored. We also keep children's amenities available on request. Families with children consistently rate us as Port Blair's most family-friendly homestay."
       }
     ]
   },
@@ -122,14 +122,14 @@ const posts = [
     content: [
       {
         heading: "Introduction",
-        body: "Luxury in the Andaman Islands has evolved dramatically. It is no longer just about massive hotel chains. Today's discerning traveller seeks exclusivity, highly personalised service, and authentic local experiences wrapped in premium comfort — all of which Ahlan Homestay delivers in abundance."
+        body: "Luxury in the Andaman Islands has evolved dramatically. It is no longer just about massive hotel chains. Today's discerning traveller seeks exclusivity, highly personalised service, and authentic local experiences wrapped in premium comfort — all of which Ahlan Homestays delivers in abundance."
       },
       {
         heading: "What Makes a Gold Category Homestay",
-        body: "India's Ministry of Tourism awards the coveted Gold Category rating to homestays that meet the highest standards of room quality, service, hygiene, amenities, and guest experience. Ahlan Homestay holds this prestigious certification — Port Blair's only Gold Category premium homestay — meaning every stay is independently verified to meet luxury standards."
+        body: "India's Ministry of Tourism awards the coveted Gold Category rating to homestays that meet the highest standards of room quality, service, hygiene, amenities, and guest experience. Ahlan Homestays holds this prestigious certification — Port Blair's only Gold Category premium homestay — meaning every stay is independently verified to meet luxury standards."
       },
       {
-        heading: "Luxury Amenities at Ahlan Homestay",
+        heading: "Luxury Amenities at Ahlan Homestays",
         body: "Plush high-thread-count linens and premium mattresses. State-of-the-art en-suite bathrooms with premium toiletries. 100 Mbps high-speed WiFi throughout. 24/7 power backup — zero power cuts. Dedicated concierge available round the clock. Daily housekeeping and turndown service. Complimentary airport pickup and drop. Daily gourmet breakfast included."
       },
       {
@@ -141,8 +141,8 @@ const posts = [
         body: "January to March offers the best luxury experience — all premium activities are open, weather is ideal, and the islands are at their most vibrant. December is peak luxury travel month; book rooms 2–3 months in advance. November and April are excellent value months with near-identical conditions at lower rates. For the ultimate luxury Andaman experience, we recommend a 5-night stay combining Port Blair, Havelock, and Neil Island."
       },
       {
-        heading: "Why Ahlan Homestay Redefines Island Luxury",
-        body: "Why settle for a tiny hotel room in an impersonal chain when you can experience the expansive, elegantly designed suites at Ahlan Homestay? Our obsessive attention to detail sets us apart — from the moment your personalised welcome gift arrives in your room to the private transfer that takes you back to the airport. Ahlan Homestay is not just accommodation. It is the centrepiece of your entire Andaman experience."
+        heading: "Why Ahlan Homestays Redefines Island Luxury",
+        body: "Why settle for a tiny hotel room in an impersonal chain when you can experience the expansive, elegantly designed suites at Ahlan Homestays? Our obsessive attention to detail sets us apart — from the moment your personalised welcome gift arrives in your room to the private transfer that takes you back to the airport. Ahlan Homestays is not just accommodation. It is the centrepiece of your entire Andaman experience."
       }
     ]
   },
@@ -169,15 +169,15 @@ const posts = [
       },
       {
         heading: "Permits & Documents",
-        body: "Indian citizens do NOT need any special permit to visit Port Blair and most Andaman Islands. Foreign nationals require a Restricted Area Permit (RAP) issued free of charge on arrival at the airport. Entry to some specific islands (Nicobar, Little Andaman interior zones) requires additional permits. Carry a government-issued photo ID at all times. Ahlan Homestay handles all permit guidance for international guests."
+        body: "Indian citizens do NOT need any special permit to visit Port Blair and most Andaman Islands. Foreign nationals require a Restricted Area Permit (RAP) issued free of charge on arrival at the airport. Entry to some specific islands (Nicobar, Little Andaman interior zones) requires additional permits. Carry a government-issued photo ID at all times. Ahlan Homestays handles all permit guidance for international guests."
       },
       {
         heading: "Getting Around After Arrival",
-        body: "From the airport, taxis and auto-rickshaws are readily available. The airport is located at Veer Savarkar Marg, approximately 7 km from Aberdeen Bazaar. Renting a two-wheeler is popular for independent exploration within Port Blair. For inter-island travel, ferries are the primary mode of transport. Ahlan Homestay provides complimentary airport transfers for all guests — just share your flight details when booking."
+        body: "From the airport, taxis and auto-rickshaws are readily available. The airport is located at Veer Savarkar Marg, approximately 7 km from Aberdeen Bazaar. Renting a two-wheeler is popular for independent exploration within Port Blair. For inter-island travel, ferries are the primary mode of transport. Ahlan Homestays provides complimentary airport transfers for all guests — just share your flight details when booking."
       },
       {
-        heading: "Your Arrival at Ahlan Homestay",
-        body: "The moment you land, your true vacation should begin immediately. When you book with Ahlan Homestay, our premium airport transfer team will be waiting at the arrivals gate with a personalised welcome sign. We take the stress out of navigating a new destination entirely. From the airport straight to the luxurious comfort of your room, your Andaman adventure starts the right way — relaxed, welcomed, and excited."
+        heading: "Your Arrival at Ahlan Homestays",
+        body: "The moment you land, your true vacation should begin immediately. When you book with Ahlan Homestays, our premium airport transfer team will be waiting at the arrivals gate with a personalised welcome sign. We take the stress out of navigating a new destination entirely. From the airport straight to the luxurious comfort of your room, your Andaman adventure starts the right way — relaxed, welcomed, and excited."
       }
     ]
   }
@@ -335,11 +335,11 @@ export default function BlogSection() {
                   <div className="absolute top-0 right-0 w-24 h-24 bg-champagne/10 rounded-full blur-3xl" />
                   <h3 className="font-serif text-xl font-bold mb-2 text-white relative z-10">Experience the Best of Andaman</h3>
                   <p className="text-gray-300 font-sans text-xs mb-5 max-w-sm mx-auto relative z-10">
-                    Stop searching and start relaxing. Book your stay at Ahlan Homestay — Port Blair&apos;s most premium Gold Category homestay.
+                    Stop searching and start relaxing. Book your stay at Ahlan Homestays — Port Blair&apos;s most premium Gold Category homestay.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3 justify-center relative z-10">
                     <a
-                      href={`https://wa.me/919434281386?text=Hi! I read the "${activePost.title}" guide and want to book my stay at Ahlan Homestay!`}
+                      href={`https://wa.me/919434281386?text=Hi! I read the "${activePost.title}" guide and want to book my stay at Ahlan Homestays!`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-primary inline-flex items-center justify-center gap-2 text-sm py-2.5 px-5"
