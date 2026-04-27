@@ -16,9 +16,9 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ahlanandaman.in'),
-  title: "Ahlan Homestayss | Premium Gold Category Homestay in Port Blair",
+  title: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
   description:
-    "Ahlan Homestayss | Premium Gold Category Homestay in Port Blair. Experience premium luxury homestay in Port Blair, Andaman. Spacious 300+ sq ft AC rooms, hotel-grade comfort, island packages & personalized hospitality.",
+    "Ahlan Homestays | Premium Gold Category Homestay in Port Blair. Experience premium luxury homestay in Port Blair, Andaman. Spacious 300+ sq ft AC rooms, hotel-grade comfort, island packages & personalized hospitality.",
   applicationName: 'ahlanandaman.in',
   manifest: '/manifest.json',
   icons: {
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     "premium rooms Port Blair",
     "Andaman island stay",
     "ahlanandaman.in",
-    "Ahlan Homestayss",
+    "Ahlan Homestays",
     "Gold category homestay Andaman",
   ].join(", "),
-  authors: [{ name: "Ahlan Homestayss" }],
+  authors: [{ name: "Ahlan Homestays" }],
   creator: "ahlanandaman.in",
   publisher: "ahlanandaman.in",
   robots: {
@@ -63,9 +63,9 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://ahlanandaman.in",
     siteName: "ahlanandaman.in",
-    title: "Ahlan Homestayss | Premium Gold Category Homestay in Port Blair",
+    title: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
     description:
-      "Ahlan Homestayss | Premium Gold Category Homestay in Port Blair. Spacious 300+ sq ft deluxe rooms, curated island packages & world-class hospitality.",
+      "Ahlan Homestays | Premium Gold Category Homestay in Port Blair. Spacious 300+ sq ft deluxe rooms, curated island packages & world-class hospitality.",
     images: [
       {
         url: "/og-image.jpg",
@@ -77,8 +77,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ahlan Homestayss | Premium Gold Category Homestay in Port Blair",
-    description: "Ahlan Homestayss | Premium Gold Category Homestay in Port Blair. Hotel comfort with homely warmth.",
+    title: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair",
+    description: "Ahlan Homestays | Premium Gold Category Homestay in Port Blair. Hotel comfort with homely warmth.",
     images: ["/og-image.jpg"],
   },
   alternates: {
