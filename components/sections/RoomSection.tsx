@@ -14,7 +14,7 @@ const rooms = [
     size: "300+ sq ft",
     guests: "Max 3 Guests",
     basePrice: 2500,
-    image: "/images/rooms/forest-view.jpg",
+    image: "/images/rooms/forest-view.png",
     desc: "Wake up to lush tropical forest greenery. Spacious deluxe room with premium furnishings and serene nature views.",
     features: ["King-Size Bed", "AC", "Smart TV", "Premium Bath", "Free WiFi", "Daily Cleaning"],
     tag: "Forest Views",
