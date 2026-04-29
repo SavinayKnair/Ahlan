@@ -1,13 +1,13 @@
 {
   "rooms": [
     {
-      "id": "deluxe-garden",
-      "name": "Deluxe Garden View Room",
+      "id": "deluxe-forest",
+      "name": "Deluxe Forest View Room",
       "size": "300+ sq ft",
       "guests": "Max 3 Guests",
-      "basePrice": 2999,
-      "image": "/images/rooms/garden-view.jpg",
-      "desc": "Wake up to tropical greenery. Spacious deluxe room with premium furnishings, king-size bed, and premium ensuite bathroom.",
+      "basePrice": 2500,
+      "image": "/images/rooms/forest-view.jpg",
+      "desc": "Wake up to lush tropical forest greenery. Spacious deluxe room with premium furnishings and serene nature views.",
       "features": [
         "King-Size Bed",
         "AC",
@@ -16,9 +16,9 @@
         "Free WiFi",
         "Daily Cleaning"
       ],
-      "tag": "Garden Views",
+      "tag": "Forest Views",
       "tagColor": "bg-palm",
-      "availability": "3 Rooms Left Today"
+      "availability": "Only 1 Available"
     },
     {
       "id": "deluxe-premium",
@@ -26,7 +26,7 @@
       "size": "300+ sq ft",
       "guests": "Max 3 Guests",
       "basePrice": 3499,
-      "image": "/images/rooms/premium-stay.jpeg",
+      "image": "/images/rooms/premium-stay.jpg",
       "desc": "Elevated comfort with higher floor views and upgraded amenities. Perfect for couples seeking a touch of extra luxury.",
       "features": [
         "King-Size Bed",
@@ -65,8 +65,8 @@
       "name": "Deluxe Couple Retreat Room",
       "size": "300+ sq ft",
       "guests": "Max 2 Guests",
-      "basePrice": 4999,
-      "image": "/images/rooms/couple-retreat.jpeg",
+      "basePrice": 2500,
+      "image": "/images/rooms/couple-retreat.jpg",
       "desc": "Romantic premium setup with optional rose petal décor, private balcony access, and personalized turndown service.",
       "features": [
         "King-Size Bed",
@@ -78,7 +78,27 @@
       ],
       "tag": "Romantic",
       "tagColor": "bg-rose-500",
-      "availability": "2 Rooms Available"
+      "availability": "Only 1 Available"
+    },
+    {
+      "id": "deluxe-runway",
+      "name": "Deluxe Runway View Room",
+      "size": "320+ sq ft",
+      "guests": "Max 3 Guests",
+      "basePrice": 2500,
+      "image": "/images/rooms/runway-view.jpg",
+      "desc": "Perfect for aviation enthusiasts. Watch planes land and take off from the comfort of your luxury premium room.",
+      "features": [
+        "King-Size Bed",
+        "AC",
+        "Soundproof Windows",
+        "Smart TV",
+        "Free WiFi",
+        "Premium Bath"
+      ],
+      "tag": "Unique View",
+      "tagColor": "bg-blue-600",
+      "availability": "Only 1 Available"
     }
   ],
   "packages": [

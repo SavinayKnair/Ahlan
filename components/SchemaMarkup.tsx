@@ -35,7 +35,7 @@ export default function SchemaMarkup() {
       latitude: 11.6234,
       longitude: 92.7265,
     },
-    image: `${baseUrl}/images/rooms/forest-view.jpeg`,
+    image: `${baseUrl}/images/rooms/forest-view.jpg`,
     priceRange: "₹₹",
     starRating: {
       "@type": "Rating",
