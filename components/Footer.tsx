@@ -25,9 +25,9 @@ const footerLinks = {
     { label: "Havelock Tour Stay", href: "/havelock-tour-package-stay" },
   ],
   packages: [
-    { label: "Romantic Escape (3N/4D)", href: "/packages#p1" },
-    { label: "Adventure Explorer (4N/5D)", href: "/packages#p2" },
-    { label: "Family Fun (5N/6D)", href: "/packages#p3" },
+    { label: "3 NIGHTS 4 DAYS", href: "/packages#p1" },
+    { label: "4 NIGHTS 5 DAYS", href: "/packages#p2" },
+    { label: "5 NIGHTS 6 DAYS", href: "/packages#p3" },
   ],
 };
 
