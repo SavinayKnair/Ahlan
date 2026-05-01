@@ -25,12 +25,9 @@ const footerLinks = {
     { label: "Havelock Tour Stay", href: "/havelock-tour-package-stay" },
   ],
   packages: [
-    { label: "3 Nights / 4 Days Package", href: "/packages#3n4d" },
-    { label: "4 Nights / 5 Days Package", href: "/packages#4n5d" },
-    { label: "5 Nights / 6 Days Package", href: "/packages#5n6d" },
-    { label: "Honeymoon Bliss Package", href: "/packages#honeymoon" },
-    { label: "Family Comfort Package", href: "/packages#family" },
-    { label: "Workation Package", href: "/packages#workation" },
+    { label: "Romantic Escape (3N/4D)", href: "/packages#p1" },
+    { label: "Adventure Explorer (4N/5D)", href: "/packages#p2" },
+    { label: "Family Fun (5N/6D)", href: "/packages#p3" },
   ],
 };
 
@@ -161,13 +158,13 @@ export default function Footer() {
                   </div>
                   <div>
                     <div className="text-xs text-white/50 font-sans">Call / WhatsApp</div>
-                    <div className="text-sm font-medium">+91 94342 81386</div>
+                    <div className="text-sm font-medium">+91 94342 81386, +91 80758 74340</div>
                   </div>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:ahlanhomestays@gmail.com"
+                  href="mailto:ahlanbb786@gmail.com"
                   className="flex items-start gap-3 text-white/70 hover:text-champagne transition-colors group"
                 >
                   <div className="w-8 h-8 rounded-full bg-champagne/10 flex items-center justify-center shrink-0 group-hover:bg-champagne/20 transition-colors">
@@ -175,7 +172,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <div className="text-xs text-white/50 font-sans">Email Us</div>
-                    <div className="text-sm font-medium">ahlanhomestays@gmail.com</div>
+                    <div className="text-sm font-medium">ahlanbb786@gmail.com</div>
                   </div>
                 </a>
               </li>
@@ -186,9 +183,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <div className="text-xs text-white/50 font-sans">Location</div>
-                    <div className="text-sm font-medium leading-relaxed">
-                      Port Blair, Andaman & Nicobar Islands, India – 744101
-                    </div>
+                    <div className="text-sm font-medium leading-relaxed">New Pahargaon, Behind Old Sapna Theater,<br />Sri Vijaya Puram - 744 105</div>
                   </div>
                 </div>
               </li>
@@ -205,9 +200,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-white/50 text-xs font-sans text-center md:text-left">
-              © {new Date().getFullYear()} Ahlan Homestays. All rights reserved. | Port Blair, Andaman & Nicobar Islands, India
-            </p>
+            <p className="font-sans text-xs text-white/50">&copy; {new Date().getFullYear()} Ahlan Homestays. All rights reserved. | Sri Vijaya Puram, Andaman & Nicobar Islands</p>
             <div className="flex items-center gap-6">
               <Link href="/privacy" className="text-white/50 hover:text-champagne text-xs font-sans transition-colors">
                 Privacy Policy

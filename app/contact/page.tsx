@@ -16,9 +16,9 @@ export default function ContactPage() {
             <h2 className="font-serif text-3xl font-bold text-midnight dark:text-white mb-8">Contact Details</h2>
             <div className="space-y-6">
               {[
-                { icon: Phone, label: "Phone / WhatsApp", value: "+91 94342 81386", href: "tel:+919434281386" },
-                { icon: Mail, label: "Email", value: "ahlanhomestays@gmail.com", href: "mailto:ahlanhomestays@gmail.com" },
-                { icon: MapPin, label: "Address", value: "Port Blair, Andaman & Nicobar Islands, India – 744101", href: "#" },
+                { icon: Phone, label: "Phone / WhatsApp", value: "+91 94342 81386, +91 80758 74340", href: "tel:+919434281386" },
+                { icon: Mail, label: "Email", value: "ahlanbb786@gmail.com, jabbarmam05@gmail.com", href: "mailto:ahlanbb786@gmail.com" },
+                { icon: MapPin, label: "Address", value: "New Pahargaon, Behind Old Sapna Theater, Sri Vijaya Puram - 744 105", href: "#" },
               ].map(({ icon: Icon, label, value, href }) => (
                 <a key={label} href={href} className="flex items-start gap-4 group">
                   <div className="w-12 h-12 rounded-2xl bg-champagne/10 flex items-center justify-center shrink-0 group-hover:bg-champagne/20 transition-colors">

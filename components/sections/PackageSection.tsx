@@ -10,83 +10,62 @@ import { useCurrency } from "../CurrencyProvider";
 const packages = [
   {
     id: "p1",
-    title: "Romantic Honeymoon Escape",
-    duration: "4 Nights / 5 Days",
-    basePrice: 29999,
-    priceSuffix: "/couple",
-    image: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&q=80&w=800",
+    title: "Romantic Escape",
+    duration: "3 Nights / 4 Days",
+    basePrice: 0,
+    priceSuffix: " (Price on Request)",
+    image: "/images/packages/romantic-honeymoon.png",
     badge: "Couple Favourite",
     badgeColor: "bg-rose-500",
-    desc: "A magical romantic getaway featuring private beach dinners, photoshoots, and sunset cruises.",
-    destinations: ["Port Blair", "Havelock Island", "Neil Island"],
-    inclusions: ["Deluxe Stay", "All Ferry Tickets", "Candlelight Dinner", "Beach Photoshoot", "Couples Spa", "Airport Transfers"],
+    desc: "A magical romantic getaway. All itineraries include a stay at AHLAN HOMESTAYS. Add extra thrills with optional water sports like Jet Skiing, Scuba Diving, and Parasailing.",
+    destinations: ["Port Blair", "Havelock Island", "Ross Island", "Chidiya Tapu"],
+    inclusions: ["Complimentary Breakfast", "Sightseeing & Entry Tickets", "Airport Transfers & Cab", "Ferry Tickets", "3-Star Accommodation", "Trip Coordinator & Taxes"],
     itinerary: [
-      { day: 1, title: "Arrival & Sunset Cruise", desc: "Airport pickup, check-in to Honeymoon Suite. Evening sunset cruise at Port Blair harbour." },
-      { day: 2, title: "Havelock Island & Radhanagar", desc: "Premium ferry to Havelock. Visit Asia's best beach, Radhanagar. Evening candlelight dinner." },
-      { day: 3, title: "Elephant Beach Snorkeling", desc: "Private boat to Elephant Beach for snorkeling. Afternoon couples spa session." },
-      { day: 4, title: "Neil Island Romance", desc: "Ferry to Neil Island. Visit Natural Bridge and Laxmanpur beach sunset. Return to Port Blair." },
-      { day: 5, title: "Departure", desc: "Breakfast and airport drop with unforgettable memories." }
+      { day: 1, title: "Arrival & Port Blair", desc: "Arrive at Port Blair by flight, receive a transfer to Ahlan Homestays. Afternoon: Visit Corbyn's Cove Beach. Evening: Attend the enthralling Light and Sound show at Cellular Jail." },
+      { day: 2, title: "Havelock Island", desc: "Early departure by inter-island ferry to Havelock Island. Afternoon: Visit Beach No. 7 (Radha Nagar), rated as one of Asia's most beautiful beaches. Evening: Enjoy dinner overlooking the scenic Taal Volcano." },
+      { day: 3, title: "Ross Island & Chidiya Tapu", desc: "Visit Ross Island (former British governing headquarters). Evening: Return to Port Blair for a city tour and a trip to Chidiya Tapu sunset point." },
+      { day: 4, title: "Departure", desc: "Morning airport drop-off for your journey home." }
     ]
   },
   {
     id: "p2",
-    title: "Family Discovery Tour",
-    duration: "5 Nights / 6 Days",
-    basePrice: 18999,
-    priceSuffix: "/person",
-    image: "https://images.unsplash.com/photo-1602088113235-229c19758e9f?auto=format&fit=crop&q=80&w=800",
-    badge: "Family Recommended",
-    badgeColor: "bg-palm",
-    desc: "Safe, comfortable, and engaging trip designed perfectly for families with children of all ages.",
-    destinations: ["Port Blair", "Havelock Island", "Ross Island"],
-    inclusions: ["Family Suite Stay", "All Ferry Tickets", "Glass-Bottom Boat", "Kids Activity Kit", "Daily Breakfast", "Airport Transfers"],
+    title: "Adventure Explorer",
+    duration: "4 Nights / 5 Days",
+    basePrice: 21999,
+    priceSuffix: " / person",
+    image: "/images/packages/family-discovery.png",
+    badge: "Adventure Pick",
+    badgeColor: "bg-blue-600",
+    desc: "Thrilling island hopping and water sports adventure. Includes complimentary beachside snorkeling. Optional Jet Skiing, Scuba Diving, and more available on request.",
+    destinations: ["Port Blair", "Havelock Island", "Neil Island", "Ross Island"],
+    inclusions: ["Complimentary Breakfast", "Sightseeing & Entry Tickets", "Airport Transfers & Cab", "Ferry Tickets", "3-Star Accommodation", "Trip Coordinator & Taxes"],
     itinerary: [
-      { day: 1, title: "Arrival & Cellular Jail", desc: "Airport pickup. Evening visit to Cellular Jail and Light & Sound show." },
-      { day: 2, title: "Ross Island & North Bay", desc: "Glass bottom boat ride to see corals. Historical tour of Ross Island." },
-      { day: 3, title: "Havelock Island", desc: "Ferry to Havelock. Family time at Radhanagar beach." },
-      { day: 4, title: "Elephant Beach", desc: "Safe snorkeling and water sports for the family at Elephant Beach." },
-      { day: 5, title: "Return to Port Blair", desc: "Souvenir shopping and visit to Samudrika Marine Museum." },
-      { day: 6, title: "Departure", desc: "Airport drop." }
+      { day: 1, title: "Arrival & Cellular Jail", desc: "Arrive in Port Blair, transfer to Ahlan Homestays. Visit Corbyn's Cove Beach in the afternoon, and attend the Light and Sound show at Cellular Jail in the evening." },
+      { day: 2, title: "Havelock Island", desc: "Early morning ferry to Havelock Island, afternoon visit to Radha Nagar Beach, and evening dinner overlooking Taal Volcano." },
+      { day: 3, title: "Elephanta Beach & Neil Island", desc: "Early checkout to visit Elephanta Beach for complimentary beachside snorkeling. Return to Port Blair in the evening OR proceed from Havelock to Neil Island for an overnight stay." },
+      { day: 4, title: "Ross Island & Sunset", desc: "Visit Ross Island, return for a Port Blair city tour, and visit Chidiya Tapu for the sunset. Stay in Port Blair." },
+      { day: 5, title: "Departure", desc: "Transfer to the airport for departure." }
     ]
   },
   {
     id: "p3",
-    title: "Premium Island Luxury Tour",
-    duration: "6 Nights / 7 Days",
-    basePrice: 34555,
-    priceSuffix: "/person",
-    image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&q=80&w=800",
-    badge: "Most Popular",
-    badgeColor: "bg-champagne",
-    desc: "The ultimate Andaman experience. VIP transfers, premium stays, and exclusive island tours.",
-    destinations: ["Port Blair", "Havelock", "Neil", "Baratang"],
-    inclusions: ["Premium Room", "Makruzz VIP Ferry", "Private Cab", "Scuba Diving", "Limestone Caves", "All Meals"],
+    title: "Family Fun",
+    duration: "5 Nights / 6 Days",
+    basePrice: 25555,
+    priceSuffix: " / person",
+    image: "https://images.unsplash.com/photo-1602088113235-229c19758e9f?auto=format&fit=crop&q=80&w=800",
+    badge: "Family Recommended",
+    badgeColor: "bg-palm",
+    desc: "Safe, comfortable, and engaging trip designed perfectly for families with children of all ages. Enjoy the best of Andaman's beaches and history.",
+    destinations: ["Port Blair", "Havelock", "Neil Island", "Ross Island"],
+    inclusions: ["Complimentary Breakfast", "Sightseeing & Entry Tickets", "Airport Transfers & Cab", "Ferry Tickets", "3-Star Accommodation", "Trip Coordinator & Taxes"],
     itinerary: [
-      { day: 1, title: "VIP Arrival", desc: "Welcome drinks, check-in. Evening at Corbyn's Cove beach." },
-      { day: 2, title: "Baratang Island", desc: "Early morning trip through Jarawa reserve to Limestone Caves." },
-      { day: 3, title: "Havelock Island", desc: "VIP ferry to Havelock. Sunset at Radhanagar Beach." },
-      { day: 4, title: "Scuba Experience", desc: "Introductory scuba diving with PADI certified instructors." },
-      { day: 5, title: "Neil Island", desc: "Ferry to Neil Island. Relax at Bharatpur beach." },
-      { day: 6, title: "Port Blair Heritage", desc: "Return to Port Blair. City tour and shopping." },
-      { day: 7, title: "Departure", desc: "VIP airport transfer." }
-    ]
-  },
-  {
-    id: "p4",
-    title: "Workation + Vacation Plan",
-    duration: "14 Nights / 15 Days",
-    basePrice: 45000,
-    priceSuffix: "/person",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
-    badge: "Long Stay",
-    badgeColor: "bg-ocean-light",
-    desc: "Work remotely with 100Mbps WiFi during the week, explore tropical paradise on the weekends.",
-    destinations: ["Port Blair Base", "Weekend Islands"],
-    inclusions: ["Deluxe Room", "100Mbps WiFi", "Work Desk", "Weekend Island Trips", "Laundry", "Breakfast"],
-    itinerary: [
-      { day: "Mon-Fri", title: "Remote Work Setup", desc: "High-speed WiFi, dedicated workspace, endless coffee." },
-      { day: "Weekends", title: "Island Hopping", desc: "Guided weekend trips to Havelock, Neil, and Ross Islands." },
-      { day: "Anytime", title: "Local Exploration", desc: "Evening visits to local cafes and sunset points." }
+      { day: 1, title: "Arrival & Port Blair", desc: "Arrive in Port Blair, transfer to Ahlan Homestays. Visit Corbyn's Cove Beach in the afternoon, and attend the Cellular Jail Light and Sound show in the evening." },
+      { day: 2, title: "Havelock Island", desc: "Early morning ferry to Havelock Island, afternoon visit to Radha Nagar Beach, and evening dinner overlooking Taal Volcano." },
+      { day: 3, title: "Elephanta & Neil Island", desc: "Early checkout for Elephanta Beach (complimentary snorkeling). In the afternoon, travel to Neil Island and stay overnight at a resort." },
+      { day: 4, title: "Neil Island & Return", desc: "Visit Laxmanpur Beach at Neil Island for a photography spot. Return to Port Blair via Nautika/Makruzz ferry. Evening visit to Chidiya Tapu for the sunset." },
+      { day: 5, title: "City Tour", desc: "After breakfast, embark on a Port Blair city tour. After lunch, visit Chidiya Tapu sunset point or Ross Island and North Bay Island." },
+      { day: 6, title: "Departure", desc: "Transfer to the airport for departure." }
     ]
   }
 ];
@@ -142,8 +121,11 @@ function PackageCard({ pkg, index }: { pkg: typeof packages[0], index: number })
 
         <div className="mt-auto pt-6 border-t border-gray-100 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <div className="text-[10px] uppercase tracking-wider text-warmgray font-sans mb-1">Starting from</div>
-            <div className="font-serif text-3xl font-bold text-gradient-gold">{formatPrice(pkg.basePrice)}<span className="text-sm text-warmgray font-sans font-medium">{pkg.priceSuffix}</span></div>
+            <div className="text-[10px] uppercase tracking-wider text-warmgray font-sans mb-1">{pkg.basePrice > 0 ? "Starting from" : "Custom Quote"}</div>
+            <div className="font-serif text-3xl font-bold text-gradient-gold">
+              {pkg.basePrice > 0 ? formatPrice(pkg.basePrice) : "Price on Request"}
+              <span className="text-sm text-warmgray font-sans font-medium">{pkg.basePrice > 0 ? pkg.priceSuffix : ""}</span>
+            </div>
           </div>
           <div className="flex w-full sm:w-auto gap-3">
             <button
