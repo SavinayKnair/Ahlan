@@ -21,13 +21,13 @@ export default function SchemaMarkup() {
       "Ahlan Homestays | Premium Gold Category Homestay in Port Blair. Spacious 300+ sq ft deluxe AC rooms, curated island packages, airport transfers and world-class hospitality.",
     url: baseUrl,
     telephone: "+91-9434281386",
-    email: "ahlanhomestays@gmail.com",
+    email: "ahlanbb786@gmail.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Port Blair",
-      addressLocality: "Port Blair",
+      streetAddress: "New Pahargaon, Behind Old Sapna Theater",
+      addressLocality: "Sri Vijaya Puram",
       addressRegion: "Andaman and Nicobar Islands",
-      postalCode: "744101",
+      postalCode: "744105",
       addressCountry: "IN",
     },
     geo: {

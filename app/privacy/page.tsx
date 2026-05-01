@@ -84,8 +84,9 @@ export default function PrivacyPolicy() {
               If you have any questions regarding this Privacy Policy, please contact our data privacy coordinator at:
             </p>
             <p className="mt-4 font-bold text-midnight dark:text-white">
-              Email: ahlanhomestays@gmail.com<br />
-              Phone: +91 94342 81386
+              Email: ahlanbb786@gmail.com<br />
+              Phone: +91 94342 81386, +91 80758 74340<br />
+              Address: New Pahargaon, Behind Old Sapna Theater, Sri Vijaya Puram - 744 105
             </p>
           </section>
         </div>
