@@ -1,10 +1,11 @@
 "use client";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Star, Quote, CheckCircle, Sparkles, QrCode, Download } from "lucide-react";
 import Link from "next/link";
 
-const reviews = [
+const initialReviews = [
   {
     name: "Priya & Arjun Mehta",
     location: "Mumbai, India",
@@ -13,6 +14,7 @@ const reviews = [
     tag: "Honeymoon",
     text: "Ahlan Homestay exceeded every expectation! The room was huge, spotlessly clean, and the team arranged everything from our ferry to candlelight dinner on the beach. Best honeymoon decision we ever made!",
     date: "March 2026",
+    isLive: false,
   },
   {
     name: "The Sharma Family",
@@ -22,6 +24,7 @@ const reviews = [
     tag: "Family",
     text: "Travelling with three kids can be stressful, but Ahlan made it magical. They handled all the logistics, the rooms were spacious, and our kids loved every activity. Will be back!",
     date: "January 2026",
+    isLive: false,
   },
   {
     name: "David & Emma Wilson",
@@ -31,6 +34,7 @@ const reviews = [
     tag: "International",
     text: "As international travelers we were nervous, but the team provided an English-speaking guide, SIM card and handled everything. The rooms were like a boutique hotel — immaculate and beautiful.",
     date: "February 2026",
+    isLive: false,
   },
   {
     name: "Rajan Kumar",
@@ -40,6 +44,7 @@ const reviews = [
     tag: "Workation",
     text: "Spent 10 days working remotely from Ahlan. The WiFi was genuinely fast, work desk was ergonomic, and on weekends I was at Havelock. Perfect workation setup — highly recommended!",
     date: "April 2026",
+    isLive: false,
   },
   {
     name: "Fatima Al-Rashid",
@@ -49,6 +54,7 @@ const reviews = [
     tag: "International",
     text: "Premium experience from start to finish. Airport pickup was right on time, the homestay felt like a luxury boutique hotel. The Andaman packages were perfectly organized. 10/10!",
     date: "December 2025",
+    isLive: false,
   },
   {
     name: "Arundhati & Mohan",
@@ -58,6 +64,7 @@ const reviews = [
     tag: "Anniversary",
     text: "Celebrated our 10th anniversary here and it was beyond words. The team decorated the room with flowers, arranged a beach dinner — it felt like a Maldives luxury resort on an Indian budget!",
     date: "November 2025",
+    isLive: false,
   },
 ];
 
@@ -73,6 +80,28 @@ function StarRow({ count }: { count: number }) {
 
 export default function TestimonialsSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [reviewsList, setReviewsList] = useState(initialReviews);
+
+  useEffect(() => {
+    fetch("/api/feedback")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.feedback && data.feedback.length > 0) {
+          const liveReviews = data.feedback.map((f: any) => ({
+            name: f.name,
+            location: f.stayType || "Port Blair Stay",
+            avatar: "⭐",
+            rating: Number(f.rating) || 5,
+            tag: "Verified Guest",
+            text: f.review,
+            date: f.timestamp ? new Date(f.timestamp).toLocaleDateString("en-IN", { month: "short", year: "numeric" }) : "Recent",
+            isLive: true,
+          }));
+          setReviewsList([...liveReviews, ...initialReviews]);
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   return (
     <section id="reviews" className="section-padding bg-white dark:bg-[#0D1A26]">
@@ -114,13 +143,13 @@ export default function TestimonialsSection() {
 
         {/* Reviews Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reviews.map((r, i) => (
+          {reviewsList.slice(0, 6).map((r, i) => (
             <motion.div
-              key={r.name}
+              key={r.name + i}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="testimonial-card"
+              className="testimonial-card relative"
             >
               <Quote className="w-8 h-8 text-champagne/30 mb-4" />
               <StarRow count={r.rating} />
@@ -136,7 +165,7 @@ export default function TestimonialsSection() {
                   </div>
                 </div>
                 <div className="flex flex-col items-end gap-1">
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-champagne/10 text-champagne font-sans">{r.tag}</span>
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-champagne/10 text-champagne font-sans font-medium">{r.tag}</span>
                   <span className="text-xs text-warmgray dark:text-gray-500 font-sans">{r.date}</span>
                 </div>
               </div>

@@ -173,6 +173,21 @@ function DashboardContent() {
     toast.success(`Booking marked as ${newStatus}`);
   };
 
+  const updateFeedbackStatus = (id: string, newStatus: string) => {
+    if (!data) return;
+    const newFeedback = (data.feedback || []).map(f => f.id === id ? { ...f, status: newStatus } : f);
+    const newData = { ...data, feedback: newFeedback };
+    setData(newData);
+    setTimeout(() => {
+      fetch("/api/admin/data", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newData)
+      });
+    }, 100);
+    toast.success(`Feedback marked as ${newStatus}`);
+  };
+
   if (loading || !data) return (
     <div className="flex items-center justify-center h-[60vh]"><Loader2 className="w-8 h-8 animate-spin text-champagne" /></div>
   );
@@ -200,11 +215,48 @@ function DashboardContent() {
       </div>
 
       {tab === "overview" && (
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="bg-white dark:bg-[#131323] border border-gray-100 dark:border-white/5 p-6 rounded-2xl shadow-sm"><h3 className="text-sm font-sans text-warmgray mb-1 uppercase tracking-wider font-semibold">Total Rooms</h3><p className="text-4xl font-serif font-bold text-midnight dark:text-white">{data.rooms.length}</p></div>
-          <div className="bg-white dark:bg-[#131323] border border-gray-100 dark:border-white/5 p-6 rounded-2xl shadow-sm"><h3 className="text-sm font-sans text-warmgray mb-1 uppercase tracking-wider font-semibold">Active Packages</h3><p className="text-4xl font-serif font-bold text-midnight dark:text-white">{data.packages.length}</p></div>
-          <div className="bg-white dark:bg-[#131323] border border-gray-100 dark:border-white/5 p-6 rounded-2xl shadow-sm"><h3 className="text-sm font-sans text-warmgray mb-1 uppercase tracking-wider font-semibold">New Bookings</h3><p className="text-4xl font-serif font-bold text-rose-500">{data.bookings.filter(b => b.status === "Pending").length}</p></div>
-          <div className="bg-white dark:bg-[#131323] border border-gray-100 dark:border-white/5 p-6 rounded-2xl shadow-sm"><h3 className="text-sm font-sans text-warmgray mb-1 uppercase tracking-wider font-semibold">Guest Reviews</h3><p className="text-4xl font-serif font-bold text-amber-500">{data.feedback?.length || 0}</p></div>
+        <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="bg-white dark:bg-[#131323] border border-gray-100 dark:border-white/5 p-6 rounded-2xl shadow-sm"><h3 className="text-sm font-sans text-warmgray mb-1 uppercase tracking-wider font-semibold">Total Rooms</h3><p className="text-4xl font-serif font-bold text-midnight dark:text-white">{data.rooms.length}</p></div>
+            <div className="bg-white dark:bg-[#131323] border border-gray-100 dark:border-white/5 p-6 rounded-2xl shadow-sm"><h3 className="text-sm font-sans text-warmgray mb-1 uppercase tracking-wider font-semibold">Active Packages</h3><p className="text-4xl font-serif font-bold text-midnight dark:text-white">{data.packages.length}</p></div>
+            <div className="bg-white dark:bg-[#131323] border border-gray-100 dark:border-white/5 p-6 rounded-2xl shadow-sm"><h3 className="text-sm font-sans text-warmgray mb-1 uppercase tracking-wider font-semibold">New Bookings</h3><p className="text-4xl font-serif font-bold text-rose-500">{data.bookings.filter(b => b.status === "Pending").length}</p></div>
+            <div className="bg-white dark:bg-[#131323] border border-gray-100 dark:border-white/5 p-6 rounded-2xl shadow-sm"><h3 className="text-sm font-sans text-warmgray mb-1 uppercase tracking-wider font-semibold">Guest Reviews</h3><p className="text-4xl font-serif font-bold text-amber-500">{data.feedback?.length || 0}</p></div>
+          </div>
+
+          {/* Recent Guest Feedback preview on Overview */}
+          <div className="bg-white dark:bg-[#131323] rounded-2xl p-6 border border-gray-100 dark:border-white/5 shadow-sm space-y-4">
+            <div className="flex items-center justify-between border-b border-gray-100 dark:border-white/5 pb-4">
+              <div>
+                <h3 className="font-serif font-bold text-lg text-midnight dark:text-white flex items-center gap-2">
+                  <Star className="w-4 h-4 fill-amber-400 text-amber-400" /> Recent Guest Feedback
+                </h3>
+                <p className="text-xs text-warmgray mt-0.5">Reviews submitted by guests via website and room QR codes.</p>
+              </div>
+              <a href="/admin-dashboard?tab=feedback" className="text-xs text-champagne font-semibold hover:underline">
+                View All &amp; Download QR Card →
+              </a>
+            </div>
+
+            {(!data.feedback || data.feedback.length === 0) ? (
+              <p className="text-xs text-warmgray py-4 text-center">No feedback recorded yet.</p>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {data.feedback.slice(0, 4).map((f: any, idx: number) => (
+                  <div key={f.id || idx} className="p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-xs text-midnight dark:text-white">{f.name}</span>
+                      <div className="flex items-center text-amber-400 text-xs">{"★".repeat(f.rating || 5)}</div>
+                    </div>
+                    <p className="text-xs text-warmgray dark:text-gray-300 italic line-clamp-2">&ldquo;{f.review}&rdquo;</p>
+                    <div className="flex items-center justify-between text-[10px] text-warmgray pt-1">
+                      <span>{f.stayType || "Room Stay"}</span>
+                      <span>{f.timestamp ? new Date(f.timestamp).toLocaleDateString("en-IN") : "Recent"}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       )}
 
@@ -431,12 +483,7 @@ function DashboardContent() {
                         </td>
                         <td className="px-6 py-4 text-center whitespace-nowrap">
                           <button
-                            onClick={() => {
-                              const newStatus = item.status === "Approved" ? "Archived" : "Approved";
-                              const updated = (data.feedback || []).map((f: any) => f.id === item.id ? { ...f, status: newStatus } : f);
-                              setDataWithHistory(p => ({ ...p, feedback: updated }));
-                              toast.success(`Feedback marked as ${newStatus}`);
-                            }}
+                            onClick={() => updateFeedbackStatus(item.id, item.status === "Approved" ? "Archived" : "Approved")}
                             className="px-2.5 py-1 text-[11px] rounded-lg border border-gray-200 dark:border-white/10 hover:border-champagne transition-colors"
                           >
                             {item.status === "Approved" ? "Archive" : "Approve"}
