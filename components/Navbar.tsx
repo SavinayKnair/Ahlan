@@ -153,7 +153,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-7">
             {navLinks.map((link) => {
               const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href) && !link.href.startsWith("/#"));
               return (
@@ -161,7 +161,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={(e) => handleSmoothScroll(e, link.href)}
-                  className={`font-sans font-medium text-sm tracking-wide transition-colors relative group ${scrolled ? "text-gray-700 dark:text-gray-200 hover:text-champagne" : "text-white/90 hover:text-champagne"} ${isActive ? "!text-champagne" : ""}`}
+                  className={`font-sans font-medium text-[13px] xl:text-sm tracking-wide transition-colors relative group ${scrolled ? "text-gray-700 dark:text-gray-200 hover:text-champagne" : "text-white/90 hover:text-champagne"} ${isActive ? "!text-champagne" : ""}`}
                 >
                   {link.label}
                   <span className={`absolute -bottom-1 left-0 h-0.5 bg-champagne transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />

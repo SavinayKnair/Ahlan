@@ -159,8 +159,8 @@ export default function FeedbackPage() {
   return (
     <main className="min-h-screen bg-pearl dark:bg-midnight pt-24 pb-20 font-sans">
       {/* Hero Banner */}
-      <div className="bg-gradient-ocean text-white py-16 sm:py-20 relative overflow-hidden">
-        <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
+      <div className="bg-gradient-ocean text-white py-14 sm:py-16 text-center relative">
+        <div className="max-w-5xl mx-auto px-4 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-champagne/15 border border-champagne/30 text-champagne text-xs font-semibold uppercase tracking-wider mb-4">
             <Sparkles className="w-3.5 h-3.5" /> Ahlan Homestays Experience
           </div>
@@ -189,7 +189,7 @@ export default function FeedbackPage() {
       </div>
 
       {/* Main Content Container */}
-      <div className="max-w-5xl mx-auto px-4 -mt-6">
+      <div className="max-w-5xl mx-auto px-4 pt-8">
         {/* Navigation Tabs */}
         <div className="bg-white dark:bg-[#131323] p-2 rounded-2xl shadow-luxury border border-gray-100 dark:border-white/10 flex flex-wrap gap-2 mb-8">
           <button
