@@ -2,9 +2,10 @@
 import { useState, useEffect, Suspense, useRef, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Loader2, Save, Upload, Link as LinkIcon, Image as ImageIcon, CalendarCheck, CheckCircle2, Clock, CheckCircle, X, Mail, Phone as PhoneIcon, Globe, Users, Calendar, Info, MessageCircle, AlertCircle, Sparkles, Undo2, Redo2, Plus, Trash2 } from "lucide-react";
+import { Loader2, Save, Upload, Link as LinkIcon, Image as ImageIcon, CalendarCheck, CheckCircle2, Clock, CheckCircle, X, Mail, Phone as PhoneIcon, Globe, Users, Calendar, Info, MessageCircle, AlertCircle, Sparkles, Undo2, Redo2, Plus, Trash2, Star, ThumbsUp } from "lucide-react";
 import Image from "next/image";
 import toast from "react-hot-toast";
+import QRCodeCard from "@/components/QRCodeCard";
 
 function ImageUploader({ value, onChange }: { value: string, onChange: (val: string) => void }) {
   return (
@@ -79,7 +80,7 @@ function AddAddonRow({ onAdd }: { onAdd: (name: string, price: number) => void }
 function DashboardContent() {
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab") || "overview";
-  const [data, setData] = useState<{ rooms: any[], packages: any[], bookings: any[], settings?: any } | null>(null);
+  const [data, setData] = useState<{ rooms: any[], packages: any[], bookings: any[], feedback?: any[], settings?: any } | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [selectedBooking, setSelectedBooking] = useState<any>(null);
@@ -125,7 +126,8 @@ function DashboardContent() {
       .then((d) => { 
         setData({
           ...d,
-          bookings: d.bookings || []
+          bookings: d.bookings || [],
+          feedback: d.feedback || []
         }); 
         setLoading(false); 
       })
@@ -198,10 +200,11 @@ function DashboardContent() {
       </div>
 
       {tab === "overview" && (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="bg-white dark:bg-[#131323] border border-gray-100 dark:border-white/5 p-6 rounded-2xl shadow-sm"><h3 className="text-sm font-sans text-warmgray mb-1 uppercase tracking-wider font-semibold">Total Rooms</h3><p className="text-4xl font-serif font-bold text-midnight dark:text-white">{data.rooms.length}</p></div>
           <div className="bg-white dark:bg-[#131323] border border-gray-100 dark:border-white/5 p-6 rounded-2xl shadow-sm"><h3 className="text-sm font-sans text-warmgray mb-1 uppercase tracking-wider font-semibold">Active Packages</h3><p className="text-4xl font-serif font-bold text-midnight dark:text-white">{data.packages.length}</p></div>
           <div className="bg-white dark:bg-[#131323] border border-gray-100 dark:border-white/5 p-6 rounded-2xl shadow-sm"><h3 className="text-sm font-sans text-warmgray mb-1 uppercase tracking-wider font-semibold">New Bookings</h3><p className="text-4xl font-serif font-bold text-rose-500">{data.bookings.filter(b => b.status === "Pending").length}</p></div>
+          <div className="bg-white dark:bg-[#131323] border border-gray-100 dark:border-white/5 p-6 rounded-2xl shadow-sm"><h3 className="text-sm font-sans text-warmgray mb-1 uppercase tracking-wider font-semibold">Guest Reviews</h3><p className="text-4xl font-serif font-bold text-amber-500">{data.feedback?.length || 0}</p></div>
         </div>
       )}
 
@@ -318,6 +321,133 @@ function DashboardContent() {
                 )}
               </tbody>
             </table>
+          </div>
+        </div>
+      )}
+
+      {tab === "feedback" && (
+        <div className="space-y-8">
+          {/* Quick Metrics */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="bg-white dark:bg-[#131323] p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-white/5">
+              <div className="text-xs font-sans text-warmgray uppercase tracking-wider font-semibold mb-1">Total Submissions</div>
+              <div className="text-3xl font-serif font-bold text-midnight dark:text-white">{(data.feedback || []).length}</div>
+            </div>
+            <div className="bg-white dark:bg-[#131323] p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-white/5">
+              <div className="text-xs font-sans text-warmgray uppercase tracking-wider font-semibold mb-1">Average Rating</div>
+              <div className="text-3xl font-serif font-bold text-amber-500 flex items-center gap-2">
+                <Star className="w-6 h-6 fill-amber-500" />
+                {((data.feedback || []).reduce((acc: number, f: any) => acc + (f.rating || 5), 0) / Math.max(1, (data.feedback || []).length)).toFixed(1)} / 5.0
+              </div>
+            </div>
+            <div className="bg-white dark:bg-[#131323] p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-white/5">
+              <div className="text-xs font-sans text-warmgray uppercase tracking-wider font-semibold mb-1">Recommendation Rate</div>
+              <div className="text-3xl font-serif font-bold text-green-500 flex items-center gap-2">
+                <ThumbsUp className="w-6 h-6" /> 100%
+              </div>
+            </div>
+          </div>
+
+          {/* Downloadable QR Standee Generator */}
+          <QRCodeCard />
+
+          {/* Feedback Submissions Table */}
+          <div className="bg-white dark:bg-[#131323] rounded-2xl shadow-sm border border-gray-100 dark:border-white/5 overflow-hidden">
+            <div className="p-6 border-b border-gray-100 dark:border-white/5 flex items-center justify-between">
+              <div>
+                <h3 className="font-serif font-bold text-lg text-midnight dark:text-white">Guest Reviews &amp; Feedback</h3>
+                <p className="text-xs text-warmgray font-sans mt-0.5">Submissions collected from website and room QR codes.</p>
+              </div>
+              <a
+                href="/feedback"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary py-2 px-4 text-xs font-medium flex items-center gap-1.5"
+              >
+                View Live Page
+              </a>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left font-sans text-xs">
+                <thead className="bg-gray-50 dark:bg-white/5 text-warmgray uppercase tracking-wider text-[10px] font-semibold">
+                  <tr>
+                    <th className="px-6 py-4">Guest</th>
+                    <th className="px-6 py-4">Rating</th>
+                    <th className="px-6 py-4">Stay Option</th>
+                    <th className="px-6 py-4">Review &amp; Experience</th>
+                    <th className="px-6 py-4 text-center">Status</th>
+                    <th className="px-6 py-4 text-center">Actions</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100 dark:divide-white/5 text-midnight dark:text-gray-300">
+                  {(!data.feedback || data.feedback.length === 0) ? (
+                    <tr>
+                      <td colSpan={6} className="px-6 py-12 text-center text-warmgray">
+                        No feedback submissions found.
+                      </td>
+                    </tr>
+                  ) : (
+                    data.feedback.map((item: any, idx: number) => (
+                      <tr key={item.id || idx} className="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+                        <td className="px-6 py-4">
+                          <div className="font-bold text-midnight dark:text-white">{item.name}</div>
+                          <div className="text-[10px] text-warmgray">{item.phone}</div>
+                          {item.email && item.email !== "N/A" && (
+                            <div className="text-[10px] text-warmgray">{item.email}</div>
+                          )}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="flex items-center text-amber-400 font-bold">
+                            {"★".repeat(item.rating || 5)}
+                            <span className="text-[10px] ml-1 text-midnight dark:text-white">({item.rating}/5)</span>
+                          </div>
+                          <div className="text-[10px] text-warmgray mt-0.5">
+                            Clean: {item.cleanlinessRating || item.rating} • Host: {item.hospitalityRating || item.rating}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 max-w-[160px]">
+                          <div className="font-serif text-xs truncate">{item.stayType || "Room Stay"}</div>
+                          <div className="text-[10px] text-warmgray">
+                            {item.timestamp ? new Date(item.timestamp).toLocaleDateString("en-IN") : "Recent"}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 max-w-xs">
+                          <p className="text-xs italic line-clamp-3">&ldquo;{item.review}&rdquo;</p>
+                          {item.recommend && (
+                            <span className="inline-block mt-1 text-[10px] text-green-600 dark:text-green-400 font-semibold">
+                              ✓ Recommends Ahlan
+                            </span>
+                          )}
+                        </td>
+                        <td className="px-6 py-4 text-center whitespace-nowrap">
+                          <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${
+                            item.status === "Approved"
+                              ? "bg-green-100 text-green-700 dark:bg-green-950/40 dark:text-green-400"
+                              : "bg-blue-100 text-blue-700 dark:bg-blue-950/40 dark:text-blue-400"
+                          }`}>
+                            {item.status || "New"}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 text-center whitespace-nowrap">
+                          <button
+                            onClick={() => {
+                              const newStatus = item.status === "Approved" ? "Archived" : "Approved";
+                              const updated = (data.feedback || []).map((f: any) => f.id === item.id ? { ...f, status: newStatus } : f);
+                              setDataWithHistory(p => ({ ...p, feedback: updated }));
+                              toast.success(`Feedback marked as ${newStatus}`);
+                            }}
+                            className="px-2.5 py-1 text-[11px] rounded-lg border border-gray-200 dark:border-white/10 hover:border-champagne transition-colors"
+                          >
+                            {item.status === "Approved" ? "Archive" : "Approve"}
+                          </button>
+                        </td>
+                      </tr>
+                    ))
+                  )}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       )}

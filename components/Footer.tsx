@@ -12,6 +12,7 @@ const footerLinks = {
     { label: "Our Rooms", href: "/rooms" },
     { label: "Packages", href: "/packages" },
     { label: "Explore Andaman", href: "/#things-to-do" },
+    { label: "Guest Feedback & QR", href: "/feedback" },
     { label: "Travel Guides", href: "/#blog" },
     { label: "Contact Us", href: "/contact" },
   ],

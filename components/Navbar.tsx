@@ -14,6 +14,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Rooms", href: "/rooms" },
   { label: "Packages", href: "/packages" },
+  { label: "Feedback", href: "/feedback" },
   { label: "Explore Andaman", href: "/#things-to-do" },
   { label: "Contact", href: "/contact" },
 ];

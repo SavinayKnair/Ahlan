@@ -20,3 +20,26 @@ INSERT INTO settings (key, value) VALUES
 ('hourlyRate', '166'),
 ('taxes', '0'),
 ('seasonalRateMultiplier', '1');
+
+CREATE TABLE IF NOT EXISTS feedback (
+    id TEXT PRIMARY KEY,
+    timestamp TEXT DEFAULT CURRENT_TIMESTAMP,
+    status TEXT DEFAULT 'New',
+    name TEXT NOT NULL,
+    phone TEXT,
+    email TEXT,
+    rating INTEGER NOT NULL,
+    cleanlinessRating INTEGER,
+    hospitalityRating INTEGER,
+    locationRating INTEGER,
+    valueRating INTEGER,
+    stayType TEXT,
+    review TEXT NOT NULL,
+    recommend TEXT
+);
+
+DELETE FROM feedback;
+INSERT INTO feedback (id, timestamp, status, name, phone, email, rating, cleanlinessRating, hospitalityRating, locationRating, valueRating, stayType, review, recommend) VALUES
+('FB-101', '2026-05-02T10:30:00.000Z', 'Approved', 'Rahul & Priya Sharma', '+91 98765 43210', 'rahul.sharma@example.com', 5, 5, 5, 5, 5, '3 NIGHTS 4 DAYS', 'Had the most wonderful stay at Ahlan Homestays! The rooms were spotless, the hosts treated us like family, and the island tour was seamless. Watching the sunset at Chidiya Tapu was unforgettable. Highly recommended!', 'Yes, absolutely!'),
+('FB-102', '2026-05-05T14:15:00.000Z', 'Approved', 'Dr. Ananya Sen', '+91 91234 56789', 'ananya.sen@example.com', 5, 5, 5, 4, 5, 'Deluxe Premium Stay Room', 'Quiet, peaceful, and super hospitable. The airport pickup was punctual and the home-cooked breakfast was delicious. Will definitely stay here again on our next trip to Port Blair.', 'Yes, absolutely!'),
+('FB-103', '2026-05-09T09:00:00.000Z', 'Approved', 'Vikramaditya Verma', '+91 94444 12345', 'vikram.verma@example.com', 5, 5, 5, 5, 5, '4 NIGHTS 5 DAYS', 'The best experience in Andaman. From the scuba diving coordination to comfortable rooms, everything was managed with top professionalism. Five stars all the way!', 'Yes, absolutely!');

@@ -10,9 +10,30 @@ export async function GET() {
     const db = env.DB;
 
     if (db) {
+      // Ensure feedback table exists
+      await db.prepare(`
+        CREATE TABLE IF NOT EXISTS feedback (
+          id TEXT PRIMARY KEY,
+          timestamp TEXT DEFAULT CURRENT_TIMESTAMP,
+          status TEXT DEFAULT 'New',
+          name TEXT NOT NULL,
+          phone TEXT,
+          email TEXT,
+          rating INTEGER NOT NULL,
+          cleanlinessRating INTEGER,
+          hospitalityRating INTEGER,
+          locationRating INTEGER,
+          valueRating INTEGER,
+          stayType TEXT,
+          review TEXT NOT NULL,
+          recommend TEXT
+        )
+      `).run();
+
       const rooms = await db.prepare("SELECT * FROM rooms").all();
       const packages = await db.prepare("SELECT * FROM packages").all();
       const bookings = await db.prepare("SELECT * FROM bookings ORDER BY timestamp DESC").all();
+      const feedback = await db.prepare("SELECT * FROM feedback ORDER BY timestamp DESC").all();
       const settingsResult = await db.prepare("SELECT * FROM settings").all();
 
       const settings: any = {};
@@ -29,6 +50,7 @@ export async function GET() {
           itinerary: JSON.parse(p.itinerary as string || '[]')
         })),
         bookings: bookings.results,
+        feedback: feedback.results || [],
         settings
       });
     }
@@ -93,6 +115,24 @@ export async function POST(req: Request) {
           await db.prepare("INSERT INTO settings (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value=excluded.value")
             .bind(key, typeof value === 'object' ? JSON.stringify(value) : String(value))
             .run();
+        }
+      }
+
+      // Update Feedback
+      if (body.feedback) {
+        for (const item of body.feedback) {
+          await db.prepare(`
+            INSERT INTO feedback (id, timestamp, status, name, phone, email, rating, cleanlinessRating, hospitalityRating, locationRating, valueRating, stayType, review, recommend)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(id) DO UPDATE SET status=excluded.status, review=excluded.review
+          `).bind(
+            item.id, item.timestamp, item.status || 'Approved',
+            item.name, item.phone || 'N/A', item.email || 'N/A',
+            item.rating, item.cleanlinessRating || item.rating,
+            item.hospitalityRating || item.rating, item.locationRating || item.rating,
+            item.valueRating || item.rating, item.stayType || 'Room Stay',
+            item.review, item.recommend || 'Yes, absolutely!'
+          ).run();
         }
       }
 

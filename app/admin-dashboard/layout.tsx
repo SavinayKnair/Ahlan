@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
-import { LayoutDashboard, BedDouble, Map, CalendarCheck, FileText, LogOut, Loader2, Settings } from "lucide-react";
+import { LayoutDashboard, BedDouble, Map, CalendarCheck, FileText, LogOut, Loader2, Settings, MessageSquareHeart } from "lucide-react";
 import toast from "react-hot-toast";
 
 const navLinks = [
@@ -11,6 +11,7 @@ const navLinks = [
   { name: "Rooms", href: "/admin-dashboard?tab=rooms", tab: "rooms" },
   { name: "Packages", href: "/admin-dashboard?tab=packages", tab: "packages" },
   { name: "Bookings", href: "/admin-dashboard?tab=bookings", tab: "bookings" },
+  { name: "Feedback", href: "/admin-dashboard?tab=feedback", tab: "feedback" },
   { name: "Settings", href: "/admin-dashboard?tab=settings", tab: "settings" },
   { name: "Content", href: "/admin-dashboard?tab=content", tab: "content" },
 ];
@@ -20,6 +21,7 @@ const icons: Record<string, React.ElementType> = {
   rooms: BedDouble,
   packages: Map,
   bookings: CalendarCheck,
+  feedback: MessageSquareHeart,
   settings: Settings,
   content: FileText,
 };

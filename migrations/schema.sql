@@ -54,3 +54,21 @@ CREATE TABLE IF NOT EXISTS settings (
     key TEXT PRIMARY KEY,
     value TEXT -- Can store numbers or JSON strings
 );
+
+-- Feedback & Reviews Table
+CREATE TABLE IF NOT EXISTS feedback (
+    id TEXT PRIMARY KEY,
+    timestamp TEXT DEFAULT CURRENT_TIMESTAMP,
+    status TEXT DEFAULT 'New',
+    name TEXT NOT NULL,
+    phone TEXT,
+    email TEXT,
+    rating INTEGER NOT NULL,
+    cleanlinessRating INTEGER,
+    hospitalityRating INTEGER,
+    locationRating INTEGER,
+    valueRating INTEGER,
+    stayType TEXT,
+    review TEXT NOT NULL,
+    recommend TEXT
+);
