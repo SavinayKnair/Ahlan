@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Star, Quote, CheckCircle, Sparkles } from "lucide-react";
+import { Star, Quote, CheckCircle, Sparkles, QrCode, Download } from "lucide-react";
+import Link from "next/link";
 
 const reviews = [
   {
@@ -165,6 +166,43 @@ export default function TestimonialsSection() {
               <span className="font-medium">{b.label}</span>
             </div>
           ))}
+        </motion.div>
+
+        {/* Feedback & Downloadable QR Standee Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="mt-14 bg-gradient-ocean rounded-3xl p-6 sm:p-10 text-white text-left flex flex-col md:flex-row items-center justify-between gap-6 shadow-luxury border border-champagne/30 relative overflow-hidden"
+        >
+          <div className="space-y-2 max-w-xl">
+            <div className="inline-flex items-center gap-2 text-xs font-bold text-champagne uppercase tracking-widest">
+              <QrCode className="w-4 h-4" /> Guest Feedback &amp; Room QR Standee
+            </div>
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold">
+              Stayed with us? Share your experience!
+            </h3>
+            <p className="text-white/80 text-xs sm:text-sm font-sans leading-relaxed">
+              Rate your stay, share your memories, or download our official high-resolution QR standee card for guest room bedside tables.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <Link
+              href="/feedback"
+              className="btn-primary py-3 px-6 text-xs sm:text-sm font-semibold flex items-center gap-2"
+            >
+              <Star className="w-4 h-4 fill-current" />
+              Give Feedback
+            </Link>
+            <Link
+              href="/feedback"
+              className="px-5 py-3 rounded-full border border-white/20 hover:border-champagne hover:bg-white/10 text-xs sm:text-sm font-semibold transition-all flex items-center gap-2"
+            >
+              <Download className="w-4 h-4 text-champagne" />
+              Download Room QR Card
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
